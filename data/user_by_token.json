@@ -1,0 +1,21 @@
+{
+    "pid": 0,
+    "weight": 0,
+    "created": "2019-04-20T01:45:45+00:00",
+    "uid": 1,
+    "updated": "2020-02-02T03:22:38+00:00",
+    "locked": true,
+    "current_login_ip": null,
+    "current_login_time": null,
+    "title": "\u5929\u9053\u916c\u52e4",
+    "username": "admin",
+    "status": true,
+    "last_login_ip": null,
+    "email": "703264459@qq.com",
+    "nickname": "BaoAI",
+    "login_failure": 0,
+    "avatar": "2020/01/02/e4a77d02199947d4b0066aa9bd4e8b57.jpg",
+    "id": 1,
+    "last_login_time": null,
+    "lang": "all"
+}

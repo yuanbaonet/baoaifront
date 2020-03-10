@@ -1,0 +1,125 @@
+<!--
+
+Notice Content Module View
+
+PROJECT: BaoAI Front
+AUTHOR: henry <703264459@qq.com>
+WEBSITE: http://www.baoai.co
+COPYRIGHT: Copyright © 2016-2019 Guangzhou Yuanbao Network Co., Ltd. ( http://www.ybao.org )
+LICENSE: Apache-2.0
+CREATEDATE: 2019-11-30 02:22:26
+-->
+  <!-- Main content -->
+  <section class="content" >
+      <div id="toolbar">
+        <!-- <button id="add" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+        </button>
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+        </button>
+        <button id="configs" class="btn btn-info" >
+          <i class="glyphicon glyphicon-cog"></i> {{t('Configs')}}
+        </button> -->
+      </div>
+
+      <!-- modal add or edit -->
+      <div class="modal fade" id="modal-add-edit" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+            </div>
+            <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                    <div class="form-group has-feedback" style="display: none">
+                        <input type="hidden" class="form-control" id="uid" name="uid" value="{{notice_content.uid}}">
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="lang" class="control-label">{{t('Language')}}</label>
+                        <select class="form-control" id="lang" name="lang" ng-model="notice_content.lang" required data-required-error="{{t('Required')}}">
+                        <option ng-repeat="x in lang_list_all" value="{{x}}">{{x}}</option>
+                        </select>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="title" class="control-label">{{t('Title')}}</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="{{t('')}}" ng-model="notice_content.title" required data-required-error="{{t('Required')}}" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                  <div class="form-group has-feedback">
+                      <label for="content" class="control-label">{{t('Content')}}</label>
+                      <textarea class="form-control" id="content" name="content" placeholder="{{t('')}}" ng-model="notice_content.content" rows="5" ckeditor="content_ck" ng-change="content_change()"></textarea>
+                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                      <div class="help-block with-errors"></div>
+                  </div>
+                    <div class="form-group has-feedback">
+                        <label for="module" class="control-label">{{t('Module')}}</label>
+                        <input type="text" class="form-control" id="module" name="module" placeholder="{{t('')}}" ng-model="notice_content.module" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="reference" class="control-label">{{t('Reference')}}</label>
+                        <input type="text" class="form-control" id="reference" name="reference" placeholder="{{t('')}}" ng-model="notice_content.reference" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="reference_params" class="control-label">{{t('Reference Params')}}</label>
+                        <input type="text" class="form-control" id="reference_params" name="reference_params" placeholder="{{t('')}}" ng-model="notice_content.reference_params" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="status" class="control-label">{{t('Status')}}</label><p></p>
+                        <input type="checkbox" id="status" name="status" class="js-switch form-control"  ng-model="notice_content.status" ui-switch="{color: '#1AB394'}"/>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="weight" class="control-label">{{t('Weight')}}</label>
+                        <input type="number" class="form-control" id="weight" name="weight" placeholder="{{t('')}}" ng-model="notice_content.weight" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="1"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>            
+    </section><!-- /.content -->
+  
+    <style>
+        .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+    </style>

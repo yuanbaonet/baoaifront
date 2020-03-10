@@ -1,0 +1,251 @@
+<!--
+/*!
+ * template
+ *
+ * @desc BaoAI Front
+ * @author henry <703264459@qq.com>
+ * @see {@link http://www.baoai.co}
+ * @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+ * @license Apache-2.0
+ */   
+-->
+<!-- Main content -->
+  <section class="content" >
+      <div id="toolbar">
+        <button id="add" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i> {{t('Add')}}
+        </button>
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+        </button>
+        <button id="role" class="btn btn-info" disabled>
+            <i class="glyphicon glyphicon-group"></i> {{t('Roles')}}
+        </button>
+      </div>
+      <!-- modal add -->
+      <div class="modal fade" id="modal-default" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><b>{{t('Add')}}</b></h4>
+              </div>
+              
+              <div class="modal-body">
+                <div id="add-form-diag">
+                  <form data-toggle="validator" role="form" id="add-form" action="" method="GET">
+                        <!-- <div class="form-group has-feedback">
+                            <label for="roles" class="control-label">{{t('Roles')}}</label>
+                            <input type="hidden" class="form-control" name="roles" id="roles" value="{{admin.roles}}" required>
+                            <div class="resources-container" style="width:100%">
+                              <div class="treeSelector" ></div>
+                            </div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div>                      -->
+                        <div class="form-group has-feedback">
+                            <label for="locked" class="control-label">{{t('Locked')}}</label><p></p>
+                            <input type="checkbox" id="locked" class="js-switch form-control"  ng-model="admin.locked" ui-switch="{color: '#1AB394'}"/>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="username" class="control-label">{{t('Account')}}</label>
+                          <input type="text" class="form-control" id="username" placeholder="" pattern="^[\s\S]{3,32}" ng-model="admin.username" required data-required-error="{{t('Required')}}" data-pattern-error="{{t('3 to 32 characters in length')}}">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- <div class="form-group has-feedback">
+                            <label for="nickname" class="control-label">昵称</label>
+                            <input type="text" class="form-control" id="nickname" placeholder="" required minlength="2" maxlength="16">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div> -->
+                        <div class="form-group has-feedback">
+                          <label for="email" class="control-label">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="" ng-model="admin.email" data-error="{{t('Format error')}}" required data-required-error="{{t('Required')}}">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword" class="control-label">{{t('Password')}}</label>
+                          <div class="form-inline row">
+                            <div class="form-group col-sm-6">
+                              <input type="password" data-minlength="3" class="form-control" id="inputPassword" placeholder="Password" required ng-model="admin.password_hash"  data-error="{{t('At least 3 characters')}}">
+                              <div class="help-block">{{t('At least 3 characters')}}</div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                              <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="{{t('password do not match')}}" placeholder="Confirm" required data-required-error="{{t('Required')}}">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="email" class="control-label"></label>
+                          <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+      <!-- modal edit -->
+      <div class="modal fade" id="modal-edit" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b>{{t('Edit')}}</b></h4>
+            </div>
+            <form data-toggle="validator" role="form" id="edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                      <div class="form-group has-feedback">
+                          <label for="edit-locked" class="control-label">{{t('Locked')}}</label><p></p>
+                          <input type="checkbox" id="edit-locked" class="js-switch form-control"  ng-model="user.locked" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <label for="edit-roles" class="control-label">{{t('Roles')}}</label>
+                          <!-- <input type="hidden" class="form-control" name="edit-role-ids" id="edit-role-ids"> -->
+                          <input type="hidden" class="form-control" name="edit-roles" id="edit-roles" required value="{{user.roles}}">
+                          <div class="resources-container" style="width:100%">
+                            <div class="edit-treeSelector" ></div>
+                          </div>
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                      </div>                   
+                      <div class="form-group has-feedback">
+                        <label for="edit-username" class="control-label">{{t('Account')}}</label>
+                        <input type="text" class="form-control" id="edit-username" placeholder="" required minlength="2" maxlength="16" ng-model="user.username">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <label for="edit-nickname" class="control-label">{{t('Nickname')}}</label>
+                          <input type="text" class="form-control" id="edit-nickname" placeholder="" ng-model="user.nickname">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                      </div> 
+                      <div class="form-group has-feedback">
+                        <label for="edit-email" class="control-label">Email</label>
+                        <input type="email" class="form-control" id="edit-email" placeholder="" data-error="{{t('Format error')}}" ng-model="user.email">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group">
+                        <label for="edit-inputPassword" class="control-label">{{t('Password')}}</label>
+                        <div class="form-inline row">
+                          <div class="form-group col-sm-6">
+                            <input type="password" class="form-control" id="edit-inputPassword" placeholder="Password"  ng-model="user.password_hash">
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <input type="password" class="form-control" id="edit-inputPasswordConfirm" data-match="#edit-inputPassword" data-match-error="{{t('password do not match')}}" placeholder="Confirm">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="status" class="status">{{t('Status')}}</label><p></p>
+                        <input type="checkbox" id="status" class="js-switch form-control"  ng-model="user.status" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <!-- <div class="form-group radio icheck">
+                        <label class="control-label">{{t('Status')}}</label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="status" ng-value="1" ng-model="user.status" ng-icheck>
+                            {{t('Normal')}}
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="status" ng-value="0" ng-model="user.status" ng-icheck>
+                            {{t('Pause')}}
+                          </label>
+                        </div>
+                      </div>                   -->
+              </p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button> -->
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+              <!-- <button type="reset" class="btn btn-primary pull-left">重置</button> -->
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <!-- modal roles choice -->
+      <div class="modal fade" id="modal-role" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><b>{{t('Roles')}}</b></h4>
+              </div>
+              <form data-toggle="validator" role="form" id="add-role" action="" method="GET">
+              <div class="modal-body">
+                <p>
+                        <div class="form-group has-feedback">
+                            <label for="role-roles" class="control-label">{{t('Roles')}}</label>
+                            <input type="hidden" class="form-control" name="role-ids" id="role-ids" value="{{role.ids}}">
+                            <input type="hidden" class="form-control" name="role-roles" id="role-roles" value="{{role.roles}}">
+                            <div class="resources-container" style="width:100%">
+                              <div class="role-treeSelector" ></div>
+                            </div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div>                     
+                </p>
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button> -->
+                <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+                <!-- <button type="reset" class="btn btn-primary pull-left">重置</button> -->
+              </div>
+            </form>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="2"
+      data-show-pagination-switch="true"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>
+    </section><!-- /.content -->
+  
+    <style>
+      .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+    </style>

@@ -1,0 +1,12 @@
+.box{
+    border-top: 0px;
+    border: 1px solid #dee5e7;
+    border-radius: 4px;
+}
+.box-header{
+    border-color: #edf1f2;
+    /*background-color: #f6f8f8; */
+    background-color: #fff;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+}

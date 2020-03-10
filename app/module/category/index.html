@@ -1,0 +1,292 @@
+<!--
+/*!
+* category template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+-->
+  <!-- Main content -->
+  <section class="content" >
+      <div id="toolbar">
+        <button id="add" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+        </button>
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+        </button>
+        <button id="configs" class="btn btn-info" >
+          <i class="glyphicon glyphicon-cog"></i> {{t('Configs')}}
+        </button>
+        <button id="order" class="btn btn-success" data-toggle="modal" >
+          <i class="glyphicon glyphicon-sort-by-attributes-alt"></i> {{t('Order')}}
+        </button>
+      </div>
+
+      <!-- modal add or edit -->
+      <div class="modal fade" id="modal-add-edit" data-backdrop="false" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+            </div>
+            <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                    <div class="form-group has-feedback" style="display: none">
+                        <input type="hidden" class="form-control" id="uid" name="uid" value="{{category.uid}}">
+                    </div>
+                    <div class="form-group has-feedback">
+                      <label for="status" class="status">{{t('Status')}}</label><p></p>
+                      <input type="checkbox" id="status" class="js-switch form-control"  ng-model="category.status" ui-switch="{color: '#1AB394'}"/>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="lang" class="control-label">{{t('Language')}}</label>
+                        <select class="form-control" id="lang" name="lang" ng-model="category.lang" required data-required-error="{{t('Required')}}">
+                        <option ng-repeat="x in lang_list_all" value="{{x}}">{{x}}</option>
+                        </select>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="ismenu" class="control-label">{{t('Menu')}}</label><p></p>
+                        <input type="checkbox" id="ismenu" name="ismenu" class="js-switch form-control"  ng-model="category.ismenu" ui-switch="{color: '#1AB394'}" />
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="pid" class="control-label">{{t('Parents')}}</label>
+                        <input type="hidden" class="form-control" name="pid" id="pid" value="{{category.pid}}" required data-required-error="{{t('Required')}}">
+                        <div class="resources-container" style="width:100%">
+                                <div class="treeSelector_pid" ></div>
+                        </div>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="title" class="control-label">{{t('Title')}}</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="{{t('')}}" ng-model="category.title" required data-required-error="{{t('Required')}}" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="alias" class="control-label">{{t('Alias')}}</label>
+                        <input type="text" class="form-control" id="alias" name="alias" placeholder="{{t('')}}" ng-model="category.alias" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="weight" class="control-label">{{t('Weight')}}</label>
+                        <input type="number" class="form-control" id="weight" name="weight" placeholder="{{t('')}}" ng-model="category.weight" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="link_type_hide">
+                        <label for="link_type" class="control-label">{{t('Link Type')}}</label>
+                        <select id="link_type" name="link_type" class="form-control" ng-model="category.link_type" ng-change="link_type_change()">
+                                <option value="">{{t('Please Choice')}}</option>
+                                <option value="Inner Link">Inner Link</option>
+                                <option value="Outer Link">Outer Link</option>
+                                <option value="Article Link">Article Link</option>
+                                <option value="Block Link">Block Link</option>
+                                <option value="Route Link">Route Link</option>
+                                <option value="Divider">Divider</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="inner_link_hide">
+                        <label for="inner_link" class="control-label">{{t('Inner Link')}}</label>
+                        <input type="hidden" class="form-control" name="inner_link" id="inner_link" value="{{category.inner_link}}">
+                        <div class="resources-container" style="width:100%">
+                            <div class="treeSelector_inner_link" ></div>
+                        </div>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="link_target_hide">
+                        <label for="link_target" class="control-label">{{t('Link Target')}}</label>
+                        <select id="link_target" name="link_target" class="form-control" ng-model="category.link_target">
+                                <option value="">{{t('Please Choice')}}</option>
+                                <option value="_blank">_blank</option><option value="_self">_self</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="link_hide">
+                        <label for="link" class="control-label">{{t('Link')}}</label>
+                        <input type="text" class="form-control" id="link" name="link" placeholder="{{t('')}}" ng-model="category.link" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="block_link_hide">
+                        <label for="block_link" class="control-label">{{t('Block Link')}}</label>
+                        <select id="block_link" name="block_link" class="form-control" ng-model="category.block_link" >
+                                <option value="">{{t('Please Choice')}}</option>
+                                <option ng-repeat="x in block_block_link" value="{{x.id}}">{{x.title}}</option>
+                        </select>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="article_link_hide">
+                        <label for="article_link" class="control-label">{{t('Article Link')}}</label>
+                        <input type="number" class="form-control" id="article_link" name="article_link" placeholder="{{t('')}}" ng-model="category.article_link" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                        <button type="button" class="btn btn-primary btn-lg" id="btn_article_link">
+                            {{t('Search')}}
+                        </button>
+                    </div>
+                    <div class="form-group has-feedback" ng-hide="route_link_hide">
+                        <label for="route_link" class="control-label">{{t('Route Link')}}</label>
+                        <input type="text" class="form-control" id="route_link" name="route_link" placeholder="{{t('')}}" ng-model="category.route_link" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="keywords" class="control-label">{{t('Keywords')}}</label>
+                        <input type="text" class="form-control" id="keywords" name="keywords" placeholder="{{t('Multiple keywords are separated by commas')}}" ng-model="category.keywords" >
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="summary" class="control-label">{{t('Summary')}}</label>
+                        <textarea class="form-control" id="summary" name="summary" placeholder="{{t('')}}" ng-model="category.summary" rows="5" ckeditor="summary_ck" ></textarea>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="content" class="control-label">{{t('Content')}}</label>
+                        <textarea class="form-control" id="content" name="content" placeholder="{{t('')}}" ng-model="category.content" rows="5" ckeditor="content_ck" ></textarea>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+  
+                    <div class="form-group has-feedback" style="display: none">
+                        <input type="hidden" class="form-control" id="articles" name="articles" value="{{category.articles}}">
+                    </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="1"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>
+      
+    <!-- modalTable_article_link -->
+    <div id="modalTable_article_link" class="modal fade" tabindex="-2" role="dialog" data-backdrop="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{t('Search')}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="toolbar_article_link">
+            <button id="choice_article_link" class="btn btn-primary" disabled>
+              <i class="glyphicon glyphicon-search"></i> {{t('Add')}}
+            </button>
+          </div>
+          <div class="modal-body">
+            <table
+            id="table_article_link"
+            data-mobile-responsive="true"
+            data-locale="{{lang}}"
+            data-toolbar="#toolbar_article_link"
+            data-show-refresh="true"
+            data-show-toggle="true"
+            data-show-fullscreen="true"
+            data-show-columns="true"
+            data-detail-view="true"
+            data-show-export="true"
+            data-minimum-count-columns="1"
+            data-id-field="id"
+            data-show-footer="true"
+            data-side-pagination="server"
+            data-single-select="true"
+            data-click-to-select="true"
+            >
+            </table>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- modalTable_articles -->
+    <div id="modalTable_articles" class="modal fade" tabindex="-2" role="dialog" data-backdrop="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{t('Search')}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div id="toolbar_articles">
+            <button id="choice_articles" class="btn btn-success" disabled>
+                <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+            </button>
+            <button id="remove_articles" class="btn btn-danger" disabled>
+              <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+            </button>
+          </div>
+          <div class="modal-body">
+            <table
+            id="table_articles"
+            data-mobile-responsive="true"
+            data-locale="{{lang}}"
+            data-toolbar="#toolbar_articles"
+            data-show-refresh="true"
+            data-show-toggle="true"
+            data-show-fullscreen="true"
+            data-show-columns="true"
+            data-detail-view="true"
+            data-show-export="true"
+            data-minimum-count-columns="1"
+            data-id-field="id"
+            data-show-footer="true"
+            data-side-pagination="server"
+            data-multiple-select-row="true"
+            data-click-to-select="true"
+            >
+            </table>
+          </div>
+          <div class="modal-footer">            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modalTablearticles -->
+    </section><!-- /.content -->
+  
+    <style>
+        .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+    </style>

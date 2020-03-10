@@ -1,0 +1,55 @@
+  <!-- Main content -->
+  <section class="content" >
+      <div id="toolbar">
+        <!-- <button id="add" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i> 增加
+        </button> -->
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i>{{t('Delete')}}
+        </button>
+      </div>
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="1"
+      data-show-pagination-switch="true"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>
+    </section><!-- /.content -->
+  
+    <style>
+        .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+        #chooseicon {
+            margin:10px;
+        }
+        #chooseicon ul {
+            margin:5px 0 0 0;
+        }
+        #chooseicon ul li{
+            width:41px;height:42px;
+            line-height:42px;
+            border:1px solid #efefef;
+            padding:1px;
+            margin:1px;
+            text-align: center;
+            font-size:18px;
+        }
+        #chooseicon ul li:hover{
+            border:1px solid #2c3e50;
+            cursor:pointer;
+        }
+    </style>

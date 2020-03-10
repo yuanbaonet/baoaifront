@@ -1,0 +1,13 @@
+{
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4MTY0NTAwMCwiZXhwIjoxNjY4MDQ1MDAwfQ.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTU4MTY0NTAwMC4xNjEzNzY3fQ.lS2d74VHrTtcfM46nQC1aoNfSmY0n4uYxEMJsZItOcolozEG81K9OMM77sSurYqpONJjK6DfKt8xlFZlu7kr6w",
+        "rftoken": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU4MTY0NTAwMCwiZXhwIjoxNjY4MTMxNDAwfQ.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTU4MTY0NTAwMC4xNjEzNzY3fQ.BtckxKGSIN277d9Ld8JXpgszuHsX5hT8qdo8SsujI2yGDzCvYdTMoopswSs8IHHNv2YrDRQHGyp5NHs4hSfOdw",
+        "nickname": "BaoAI",
+        "username": "admin",
+        "avatar": "2020/01/02/e4a77d02199947d4b0066aa9bd4e8b57.jpg",
+        "id": 1,
+        "title": "\u5929\u9053\u916c\u52e4"
+    },
+    "message": "Success",
+    "status": 200000
+}

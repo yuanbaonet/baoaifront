@@ -1,0 +1,245 @@
+<!--
+/*!
+* auth template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+-->
+<div class="login-box" >
+  <div class="login-logo">
+    <a ui-sref="web.main()" ><b>BaoAI</b></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <div class="login-box-msg">
+        <div class="dropdown" style="text-align: center; font-size: 1.2em;">
+            {{t('Bao')}}&nbsp;{{t('Artificial Intelligence And Quant Platform')}}&nbsp;&nbsp;
+            <a href="javascript:;" class="dropdown-toggle" id="dropdownMenu1" 
+               data-toggle="dropdown"><i class="fa fa-language"></i>
+               <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+               <li role="presentation" ng-repeat="x in lang_list" ng-class="{'active':isActive(x)}">
+                  <a href="" ng-click="langSwitch(x)">{{t(x)}}</a>
+               </li>
+            </ul>
+         </div>        
+        </div> 
+    <form action="" data-toggle="validator" method="GET" role="form" id="login" >
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="{{t('Account')}}" ng-model="user.username" data-length="3,20">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="{{t('Password')}}" ng-model="user.password" data-length="3,20" >
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="form-group checkbox icheck">
+            <label>
+              <input type="checkbox" id="remember" ng-model="user.remember" ng-icheck> {{t('Remember')}}
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" id="login-button" data-loading-text="{{t('Login')}}..." >{{t('Login')}}</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+    <div class="social-auth-links text-center">
+      <!-- <p>- OR -</p> -->
+      <!-- <a href="" class="btn btn-block btn-social btn-facebook btn-flat" ng-click=""><i class="fa fa-qq "></i> QQ&nbsp;{{t('Login')}}</a>
+      <a href="" class="btn btn-block btn-social btn-weixin btn-flat" ng-click=""><i class="fa fa-weixin"></i> {{t('Wechat')}}&nbsp;{{t('Login')}}</a> -->
+    </div>
+    <!-- /.social-auth-links -->
+
+    <a href="#" id="forgot-login">{{t('Forget the Password')}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="text-center" id="create-user">{{t('Create new user')}}</a>
+
+  </div>
+  <!-- /.login-box-body -->
+  <p></p>
+  <p class="login-box-msg login-logo"><a href="http://www.ybao.org" target="_blank" ><b>&copy;&nbsp;{{t('Guangzhou Yuanbao Network Limited company')}}</b></a></p>
+</div>
+<!-- /.login-box -->
+
+<div class="register-box">
+  <div class="register-logo">
+    <a href="http://www.baoai.co"><b>BaoAI</b></a>
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">{{t('Register')}}</p>
+
+    <form action="" method="GET" data-toggle="validator" role="form" id="register">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" id="reg-username" placeholder="{{t('Account')}}" ng-model="reg.username"  pattern="^[_A-z0-9]{3,18}$" data-required-error="{{t('required')}}" data-pattern-error="{{t('Capital letters, lowercase letters, or numbers, 3 to 18 characters in length')}}">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" id="reg-email" placeholder="Email" ng-model="reg.email" data-error="{{t('Format Error')}}">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" data-minlength="3" id="reg-password" class="form-control" placeholder="{{t('Password')}}" ng-model="reg.password"  data-error="{{t('At least 3 characters')}}" autocomplete="off">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" id="comfirm-password" class="form-control" placeholder="{{t('Confirm Password')}}" data-match="#reg-password" data-match-error="{{t('Confirm that the password must be the same as the password')}}" data-required-error="{{t('required')}}" required autocomplete="off">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" id="reg-captcha" placeholder="{{t('Captcha')}}" ng-model="reg.captcha"  pattern="^[_A-z0-9]{4}$" data-required-error="{{t('required')}}" data-pattern-error="{{t('Captcha, letters, or numbers, 4 characters in length')}}">
+        <span class="glyphicon glyphicon-eye-open form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group has-feedback">
+        <span><img src="{{captcha}}" ></span>
+        <a href="" ng-click="getCaptcha()">{{t('Next')}}</a>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-8">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="reg-terms" ng-model="reg.terms" ng-icheck required checked data-required-error="{{t('Choose to agree to the License')}}"> {{t('Agree License')}} <a href="" data-toggle="modal" data-target="#modal-terms">terms</a>
+            </label>
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">{{t('Register')}}</button>
+        </div>
+      </div>
+    </form>
+    <!-- <p>- OR -</p> -->  
+    <!-- <div class="social-auth-links text-center">
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-qq "></i> 使用QQ登录</a>
+      <a href="#" class="btn btn-block btn-social btn-weixin btn-flat"><i class="fa fa-weixin"></i> 使用微信登录</a>
+    </div> -->
+
+    <a href="login.html" class="text-center" id="user-login">{{t('Log in with an existing account')}}</a>
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+
+<div class="register-box forgot-box">
+  <div class="register-logo">
+    <a href="http://www.baoai.co" target="_blank"><b>BaoAI</b></a>
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">{{t('Forget the Password')}}</p>
+
+    <form action="" method="GET" data-toggle="validator" role="form" id="forgetpass">
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" id="find-pass-email" placeholder="Email" ng-model="forgetpass.email" data-error="{{t('Format error')}}" required data-required-error="{{t('required')}}">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="">
+            <label>
+                {{t('Retrieve the password through the email')}}
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">{{t('Retrieve')}}</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+    <!-- <p>- OR -</p> -->
+    <!-- <div class="social-auth-links text-center">
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-qq "></i> 使用QQ登录</a>
+      <a href="#" class="btn btn-block btn-social btn-weixin btn-flat"><i class="fa fa-weixin"></i> 使用微信登录</a>
+    </div> -->
+
+    <a href="login.html" class="text-center" id="forgot-box-user-login">{{t('Log in with an existing account')}}</a>
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+
+<div class="modal fade" id="modal-terms">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">{{t('License')}}</h4>
+        </div>
+        <div class="modal-body">
+            <p recompile="agreement">
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+  <!-- /.modal -->
+
+<style>
+/*.login-box{
+  margin-top: 10px;
+} */
+.btn-weixin {
+  color: #ffffff;
+  background-color: #139e51;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.login-page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #ECF0F5;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background: url(assets/img/login/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+
+.login-box-msg b{
+  font-size: 15px;
+}
+
+
+.login-box-body, .register-box-body{
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+
+}
+
+</style>

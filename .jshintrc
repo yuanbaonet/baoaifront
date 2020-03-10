@@ -1,0 +1,44 @@
+{
+  /**
+   * 选择ES版本，3,5,6
+   */
+   "esversion": 5,
+  /**
+   * 不显示缺少分号警告
+   */
+  "asi": true,
+  /**
+   * 这个选项定义全局暴露的jQuery库。
+   */
+   "jquery": true,
+  //
+  // Environments
+  //
+  // These options let JSHint know about some pre-defined global variables.
+  /**
+   * 暴露浏览器属性的全局变量，列如 window,document;
+  注意:这个选项不暴露变量 alert或 console。
+   */
+   "browser": true,
+  /**
+  *这个选项可以用来指定一个没有正式定义的全局变量的白名单。配置 globals在单个文件,看看内联配置.
+  *需要的引用到的js类库的全局变量应该加入进来
+  */
+  "globals": {
+    "localStorage": true,
+    "app": true,
+    "export": true,
+    "console": true,
+    "Messager": true,
+    "CryptoJS": true,
+    "WebUploader":true,
+    "angular":true,
+    "CKEDITOR":true,
+    "moment":true,
+    "echarts":true,
+    "layer":true,
+    "MENU":true,
+    "NAV_MENU":true,
+    "Pace":true
+  }
+}

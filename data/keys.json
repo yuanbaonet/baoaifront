@@ -1,0 +1,1497 @@
+[
+    {
+        "value": "\u6587\u7ae0",
+        "keys": "Articles",
+        "title": "configs.i18n.Articles"
+    },
+    {
+        "value": "\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u4ece\u8fd9\u5f00\u59cb",
+        "keys": "AI And Quant Begins Here",
+        "title": "configs.i18n.AI And Quant Begins Here"
+    },
+    {
+        "value": "\u7b80\u4f53\u4e2d\u6587",
+        "keys": "Simplified Chinese",
+        "title": "configs.i18n.Simplified Chinese"
+    },
+    {
+        "value": "\u7b80\u4f53\u4e2d\u6587",
+        "keys": "zh-cn",
+        "title": "configs.i18n.zh-cn"
+    },
+    {
+        "value": "\u82f1\u6587",
+        "keys": "en",
+        "title": "configs.i18n.en"
+    },
+    {
+        "value": "\u6807\u9898",
+        "keys": "Title",
+        "title": "configs.i18n.Title"
+    },
+    {
+        "value": "\u8d44\u6e90",
+        "keys": "Resources",
+        "title": "configs.i18n.Resources"
+    },
+    {
+        "value": "\u56fe\u6807",
+        "keys": "Icon",
+        "title": "configs.i18n.Icon"
+    },
+    {
+        "value": "\u8def\u7531",
+        "keys": "Route",
+        "title": "configs.i18n.Route"
+    },
+    {
+        "value": "\u65b9\u6cd5",
+        "keys": "Method",
+        "title": "configs.i18n.Method"
+    },
+    {
+        "value": "\u6743\u91cd",
+        "keys": "Weight",
+        "title": "configs.i18n.Weight"
+    },
+    {
+        "value": "\u83dc\u5355",
+        "keys": "Menu",
+        "title": "configs.i18n.Menu"
+    },
+    {
+        "value": "\u72b6\u6001",
+        "keys": "Status",
+        "title": "configs.i18n.Status"
+    },
+    {
+        "value": "\u64cd\u4f5c",
+        "keys": "Operate",
+        "title": "configs.i18n.Operate"
+    },
+    {
+        "value": "\u7cfb\u7edf\u7ba1\u7406",
+        "keys": "system Manager",
+        "title": "configs.i18n.system Manager"
+    },
+    {
+        "value": "\u9644\u4ef6\u7ba1\u7406",
+        "keys": "Attachments",
+        "title": "configs.i18n.Attachments"
+    },
+    {
+        "value": "\u67e5\u770b\u5217\u8868",
+        "keys": "List",
+        "title": "configs.i18n.List"
+    },
+    {
+        "value": "\u589e\u52a0",
+        "keys": "Add",
+        "title": "configs.i18n.Add"
+    },
+    {
+        "value": "\u7f16\u8f91",
+        "keys": "Edit",
+        "title": "configs.i18n.Edit"
+    },
+    {
+        "value": "\u5220\u9664",
+        "keys": "Delete",
+        "title": "configs.i18n.Delete"
+    },
+    {
+        "value": "\u67e5\u770b",
+        "keys": "view",
+        "title": "configs.i18n.view"
+    },
+    {
+        "value": "\u64cd\u4f5c\u65e5\u5fd7",
+        "keys": "Operate Logs",
+        "title": "configs.i18n.Operate Logs"
+    },
+    {
+        "value": "\u914d\u7f6e\u53c2\u6570",
+        "keys": "Configs",
+        "title": "configs.i18n.Configs"
+    },
+    {
+        "value": "\u8d26\u53f7\u7ba1\u7406",
+        "keys": "User Manager",
+        "title": "configs.i18n.User Manager"
+    },
+    {
+        "value": "\u8d26\u53f7\u914d\u7f6e",
+        "keys": "User Profile",
+        "title": "configs.i18n.User Profile"
+    },
+    {
+        "value": "\u5e10\u53f7\u65e5\u5fd7",
+        "keys": "User Logs",
+        "title": "configs.i18n.User Logs"
+    },
+    {
+        "value": "\u6743\u9650\u7ba1\u7406",
+        "keys": "RBAC",
+        "title": "configs.i18n.RBAC"
+    },
+    {
+        "value": "\u7ba1\u7406\u5458",
+        "keys": "Admin",
+        "title": "configs.i18n.Admin"
+    },
+    {
+        "value": "\u89d2\u8272",
+        "keys": "Roles",
+        "title": "configs.i18n.Roles"
+    },
+    {
+        "value": "\u83b7\u53d6\u7528\u6237\u89d2\u8272",
+        "keys": "Get Roles",
+        "title": "configs.i18n.Get Roles"
+    },
+    {
+        "value": "\u589e\u52a0\u89d2\u8272",
+        "keys": "Add Role",
+        "title": "configs.i18n.Add Role"
+    },
+    {
+        "value": "\u89d2\u8272\u83dc\u5355",
+        "keys": "Roles Menu",
+        "title": "configs.i18n.Roles Menu"
+    },
+    {
+        "value": "\u8d44\u6e90\u83dc\u5355",
+        "keys": "Resources Menu",
+        "title": "configs.i18n.Resources Menu"
+    },
+    {
+        "value": "\u6240\u6709\u8d44\u6e90",
+        "keys": "All Resources",
+        "title": "configs.i18n.All Resources"
+    },
+    {
+        "value": "\u786e\u5b9a",
+        "keys": "Submit",
+        "title": "configs.i18n.Submit"
+    },
+    {
+        "value": "\u91cd\u7f6e",
+        "keys": "Reset",
+        "title": "configs.i18n.Reset"
+    },
+    {
+        "value": "\u641c\u7d22",
+        "keys": "Search",
+        "title": "configs.i18n.Search"
+    },
+    {
+        "value": "\u529f\u80fd",
+        "keys": "Feature",
+        "title": "configs.i18n.Feature"
+    },
+    {
+        "value": "\u6b63\u5e38",
+        "keys": "Normal",
+        "title": "configs.i18n.Normal"
+    },
+    {
+        "value": "\u6682\u505c",
+        "keys": "Pause",
+        "title": "configs.i18n.Pause"
+    },
+    {
+        "value": "\u7236\u7ea7",
+        "keys": "Parents",
+        "title": "configs.i18n.Parents"
+    },
+    {
+        "value": "\u5907\u6ce8",
+        "keys": "Remark",
+        "title": "configs.i18n.Remark"
+    },
+    {
+        "value": "\u4fdd\u7559",
+        "keys": "Reserve",
+        "title": "configs.i18n.Reserve"
+    },
+    {
+        "value": "\u63a7\u5236\u53f0",
+        "keys": "dashboard",
+        "title": "configs.i18n.dashboard"
+    },
+    {
+        "value": "\u5728\u7ebf",
+        "keys": "Online",
+        "title": "configs.i18n.Online"
+    },
+    {
+        "value": "\u79bb\u7ebf",
+        "keys": "Offline",
+        "title": "configs.i18n.Offline"
+    },
+    {
+        "value": "\u4eba\u5de5\u667a\u80fd\u5e73\u53f0",
+        "keys": "Artificial Intelligence Platform",
+        "title": "configs.i18n.Artificial Intelligence Platform"
+    },
+    {
+        "value": "\u5c0f\u5b9d",
+        "keys": "Bao",
+        "title": "configs.i18n.Bao"
+    },
+    {
+        "value": "\u767b\u5f55",
+        "keys": "Login",
+        "title": "configs.i18n.Login"
+    },
+    {
+        "value": "\u8bb0\u4f4f",
+        "keys": "Remember",
+        "title": "configs.i18n.Remember"
+    },
+    {
+        "value": "\u8d26\u53f7",
+        "keys": "Account",
+        "title": "configs.i18n.Account"
+    },
+    {
+        "value": "\u5bc6\u7801",
+        "keys": "Password",
+        "title": "configs.i18n.Password"
+    },
+    {
+        "value": "\u5fae\u4fe1",
+        "keys": "Wechat",
+        "title": "configs.i18n.Wechat"
+    },
+    {
+        "value": "\u5fd8\u8bb0\u5bc6\u7801",
+        "keys": "Forget the Password",
+        "title": "configs.i18n.Forget the Password"
+    },
+    {
+        "value": "\u521b\u5efa\u65b0\u7528\u6237",
+        "keys": "Create new user",
+        "title": "configs.i18n.Create new user"
+    },
+    {
+        "value": "\u7248\u6743\u6240\u6709",
+        "keys": "Copyright",
+        "title": "configs.i18n.Copyright"
+    },
+    {
+        "value": "\u5e7f\u5dde\u6e90\u5b9d\u7f51\u7edc\u6709\u9650\u516c\u53f8",
+        "keys": "Guangzhou Yuanbao Network Limited company",
+        "title": "configs.i18n.Guangzhou Yuanbao Network Limited company"
+    },
+    {
+        "value": "\u6ce8\u518c",
+        "keys": "Register",
+        "title": "configs.i18n.Register"
+    },
+    {
+        "value": "\u786e\u8ba4\u5bc6\u7801",
+        "keys": "Confirm Password",
+        "title": "configs.i18n.Confirm Password"
+    },
+    {
+        "value": "\u540c\u610f\u534f\u8bae",
+        "keys": "Agree License",
+        "title": "configs.i18n.Agree License"
+    },
+    {
+        "value": "\u8bf7\u9009\u62e9\u540c\u610f\u534f\u8bae",
+        "keys": "Choose to agree to the License",
+        "title": "configs.i18n.Choose to agree to the License"
+    },
+    {
+        "value": "\u4f7f\u7528\u73b0\u6709\u8d26\u53f7\u767b\u5f55",
+        "keys": "Log in with an existing account",
+        "title": "configs.i18n.Log in with an existing account"
+    },
+    {
+        "value": "\u901a\u8fc7\u90ae\u4ef6\u627e\u56de\u5bc6\u7801",
+        "keys": "Retrieve the password through the email",
+        "title": "configs.i18n.Retrieve the password through the email"
+    },
+    {
+        "value": "\u627e\u56de\u5bc6\u7801",
+        "keys": "Retrieve password",
+        "title": "configs.i18n.Retrieve password"
+    },
+    {
+        "value": "\u672c\u7cfb\u7edf\u9075\u5b88Apache 2.0\u534f\u8bae",
+        "keys": "The system complies with Apache 2.0 protocol",
+        "title": "configs.i18n.The system complies with Apache 2.0 protocol"
+    },
+    {
+        "value": "\u4e0d\u80fd\u4e3a\u7a7a",
+        "keys": "required",
+        "title": "configs.i18n.required"
+    },
+    {
+        "value": "\u683c\u5f0f\u9519\u8bef",
+        "keys": "Format error",
+        "title": "configs.i18n.Format error"
+    },
+    {
+        "value": "\u81f3\u5c113\u4e2a\u5b57\u7b26",
+        "keys": "At least 3 characters",
+        "title": "configs.i18n.At least 3 characters"
+    },
+    {
+        "value": "\u786e\u8ba4\u5bc6\u7801\u987b\u548c\u5bc6\u7801\u4e00\u81f4",
+        "keys": "Confirm that the password must be the same as the password",
+        "title": "configs.i18n.Confirm that the password must be the same as the password"
+    },
+    {
+        "value": "\u5927\u5199\u5b57\u6bcd\u3001\u5c0f\u5199\u5b57\u6bcd\u3001_\u6216\u8005\u6570\u5b57\u7ec4\u6210\uff0c\u957f\u5ea63\u81f318\u4e2a\u5b57\u7b26",
+        "keys": "Capital letters, lowercase letters, or numbers, 3 to 18 characters in length",
+        "title": "configs.i18n.Capital letters, lowercase letters, or numbers, 3 to 18 characters in length"
+    },
+    {
+        "value": "\u672c\u7cfb\u7edf\u9075\u5b88Apache 2.0\u534f\u8bae<br>\n\u7248\u6743\u6240\u6709\uff1a\u5e7f\u5dde\u6e90\u5b9d\u7f51\u7edc\u6709\u9650\u516c\u53f8 (http://www.ybao.org)<br>\n\u7cfb\u7edf\u5b98\u7f51\uff1ahttp://www.baoai.co",
+        "keys": "agreement",
+        "title": "configs.i18n.agreement"
+    },
+    {
+        "value": "\u627e\u56de",
+        "keys": "Retrieve",
+        "title": "configs.i18n.Retrieve"
+    },
+    {
+        "value": "\u534f\u8bae",
+        "keys": "License",
+        "title": "configs.i18n.License"
+    },
+    {
+        "value": "\u5b98\u7f51",
+        "keys": "Website",
+        "title": "configs.i18n.Website"
+    },
+    {
+        "value": "\u6587\u6863",
+        "keys": "Document",
+        "title": "configs.i18n.Document"
+    },
+    {
+        "value": "\u6e90\u7801",
+        "keys": "Code",
+        "title": "configs.i18n.Code"
+    },
+    {
+        "value": "\u8d26\u53f7\u4fe1\u606f",
+        "keys": "Profile",
+        "title": "configs.i18n.Profile"
+    },
+    {
+        "value": "\u9000\u51fa",
+        "keys": "Exit",
+        "title": "configs.i18n.Exit"
+    },
+    {
+        "value": "\u66f4\u65b0\u5934\u50cf",
+        "keys": "Update Avatar",
+        "title": "configs.i18n.Update Avatar"
+    },
+    {
+        "value": "\u4e0a\u4f20",
+        "keys": "Upload",
+        "title": "configs.i18n.Upload"
+    },
+    {
+        "value": "\u4ee4\u724c\u9519\u8bef",
+        "keys": "Token Error",
+        "title": "configs.i18n.Token Error"
+    },
+    {
+        "value": "\u91cd\u65b0\u767b\u5f55",
+        "keys": "Re-login",
+        "title": "configs.i18n.Re-login"
+    },
+    {
+        "value": "\u83b7\u53d6\u65b0\u6388\u6743\u4ee4\u724c",
+        "keys": "Get New Token Again",
+        "title": "configs.i18n.Get New Token Again"
+    },
+    {
+        "value": "\u4ee4\u724c\u66f4\u65b0\u6210\u529f",
+        "keys": "Token Update Successful",
+        "title": "configs.i18n.Token Update Successful"
+    },
+    {
+        "value": "\u4ee4\u724c\u66f4\u65b0\u5931\u8d25",
+        "keys": "Token Update Failed",
+        "title": "configs.i18n.Token Update Failed"
+    },
+    {
+        "value": "\u6ca1\u6709\u6743\u9650",
+        "keys": "No Access",
+        "title": "configs.i18n.No Access"
+    },
+    {
+        "value": "\u767b\u5f55\u5931\u8d25",
+        "keys": "Login Fail",
+        "title": "configs.i18n.Login Fail"
+    },
+    {
+        "value": "\u5185\u90e8\u670d\u52a1\u9519\u8bef",
+        "keys": "Internal Server Error",
+        "title": "configs.i18n.Internal Server Error"
+    },
+    {
+        "value": "\u6ce8\u518c\u6210\u529f",
+        "keys": "Register Success",
+        "title": "configs.i18n.Register Success"
+    },
+    {
+        "value": "\u6ce8\u518c\u5931\u8d25",
+        "keys": "Register Fail",
+        "title": "configs.i18n.Register Fail"
+    },
+    {
+        "value": "\u5bc6\u7801\u627e\u56de\u6210\u529f",
+        "keys": "Password Retrieved Successfully",
+        "title": "configs.i18n.Password Retrieved Successfully"
+    },
+    {
+        "value": "\u5bc6\u7801\u627e\u56de\u5931\u8d25",
+        "keys": "Password Retrieval Failed",
+        "title": "configs.i18n.Password Retrieval Failed"
+    },
+    {
+        "value": "\u6210\u529f",
+        "keys": "Success",
+        "title": "configs.i18n.Success"
+    },
+    {
+        "value": "\u5931\u8d25",
+        "keys": "Fail",
+        "title": "configs.i18n.Fail"
+    },
+    {
+        "value": "\u9876\u5c42",
+        "keys": "Top",
+        "title": "configs.i18n.Top"
+    },
+    {
+        "value": "\u7cfb\u7edf\u4fdd\u7559\uff0c\u65e0\u6cd5\u5220\u9664",
+        "keys": "The system is reserved and cannot be deleted",
+        "title": "configs.i18n.The system is reserved and cannot be deleted"
+    },
+    {
+        "value": "\u786e\u5b9a\u8981\u5220\u9664\u6240\u9009\u62e9\u7684\u8bb0\u5f55\u5417",
+        "keys": "Are you sure you want to delete the selected record",
+        "title": "configs.i18n.Are you sure you want to delete the selected record"
+    },
+    {
+        "value": "\u786e\u5b9a",
+        "keys": "OK",
+        "title": "configs.i18n.OK"
+    },
+    {
+        "value": "\u53d6\u6d88",
+        "keys": "Cancel",
+        "title": "configs.i18n.Cancel"
+    },
+    {
+        "value": "\u5e03\u5c40\u9009\u9879",
+        "keys": "Layout Options",
+        "title": "configs.i18n.Layout Options"
+    },
+    {
+        "value": "\u56fa\u5b9a\u5e03\u5c40",
+        "keys": "Fixed layout",
+        "title": "configs.i18n.Fixed layout"
+    },
+    {
+        "value": "\u76d2\u5b50\u5e03\u5c40",
+        "keys": "Boxed Layout",
+        "title": "configs.i18n.Boxed Layout"
+    },
+    {
+        "value": "\u6fc0\u6d3b\u76d2\u5b50\u5e03\u5c40",
+        "keys": "Activate the boxed layout",
+        "title": "configs.i18n.Activate the boxed layout"
+    },
+    {
+        "value": "\u5207\u6362\u4fa7\u8fb9\u680f",
+        "keys": "Toggle Sidebar",
+        "title": "configs.i18n.Toggle Sidebar"
+    },
+    {
+        "value": "\u5de6\u4fa7\u8fb9\u680f\u60ac\u505c",
+        "keys": "Sidebar Expand on Hover",
+        "title": "configs.i18n.Sidebar Expand on Hover"
+    },
+    {
+        "value": "\u8ba9\u5de6\u4fa7\u8fb9\u680f\u60ac\u505c\u65f6\u5c55\u5f00",
+        "keys": "Let the sidebar mini expand on hover",
+        "title": "configs.i18n.Let the sidebar mini expand on hover"
+    },
+    {
+        "value": "\u5207\u6362\u53f3\u4fa7\u64cd\u4f5c\u680f",
+        "keys": "Toggle Right Sidebar Slide",
+        "title": "configs.i18n.Toggle Right Sidebar Slide"
+    },
+    {
+        "value": "\u5207\u6362\u53f3\u4fa7\u64cd\u4f5c\u680f\u8986\u76d6\u6216\u72ec\u5360",
+        "keys": "Toggle between slide over content and push content effects",
+        "title": "configs.i18n.Toggle between slide over content and push content effects"
+    },
+    {
+        "value": "\u5207\u6362\u53f3\u4fa7\u64cd\u4f5c\u680f\u80cc\u666f",
+        "keys": "Toggle Right Sidebar Skin",
+        "title": "configs.i18n.Toggle Right Sidebar Skin"
+    },
+    {
+        "value": "\u53f3\u4fa7\u64cd\u4f5c\u680f\u80cc\u666f\u4eae\u8272\u6216\u6df1\u8272\u5207\u6362",
+        "keys": "Toggle between dark and light skins for the right sidebar",
+        "title": "configs.i18n.Toggle between dark and light skins for the right sidebar"
+    },
+    {
+        "value": "\u6362\u80a4",
+        "keys": "Skins",
+        "title": "configs.i18n.Skins"
+    },
+    {
+        "value": "\u76d2\u5b50\u6a21\u578b\u548c\u56fa\u5b9a\u5e03\u5c40\u4e0d\u80fd\u540c\u65f6\u542f\u4f5c\u7528",
+        "keys": "Activate the fixed layout. You can not use fixed and boxed layouts together",
+        "title": "configs.i18n.Activate the fixed layout. You can not use fixed and boxed layouts together"
+    },
+    {
+        "value": "\u5207\u6362\u83dc\u5355\u680f\u7684\u5c55\u793a\u6216\u6536\u8d77",
+        "keys": "Toggle the left sidebar state (open or collapse)",
+        "title": "configs.i18n.Toggle the left sidebar state (open or collapse)"
+    },
+    {
+        "value": "\u7248\u6743\u6240\u6709",
+        "keys": "All rights reserved",
+        "title": "configs.i18n.All rights reserved"
+    },
+    {
+        "value": "\u8d85\u7ea7\u7ba1\u7406\u5458",
+        "keys": "Super Administrator",
+        "title": "configs.i18n.Super Administrator"
+    },
+    {
+        "value": "\u666e\u901a\u7ba1\u7406\u5458",
+        "keys": "General Administrator",
+        "title": "configs.i18n.General Administrator"
+    },
+    {
+        "value": "\u6d4b\u8bd5",
+        "keys": "Test",
+        "title": "configs.i18n.Test"
+    },
+    {
+        "value": "\u7528\u6237\u540d",
+        "keys": "Username",
+        "title": "configs.i18n.Username"
+    },
+    {
+        "value": "\u5bc6\u7801\u4e0d\u4e00\u81f4",
+        "keys": "password do not match",
+        "title": "configs.i18n.password do not match"
+    },
+    {
+        "value": "\u6635\u79f0",
+        "keys": "Nickname",
+        "title": "configs.i18n.Nickname"
+    },
+    {
+        "value": "\u81ea\u8eab\u6743\u9650",
+        "keys": "Own RBAC",
+        "title": "configs.i18n.Own RBAC"
+    },
+    {
+        "value": "\u6240\u6709\u6743\u9650",
+        "keys": "All RBAC",
+        "title": "configs.i18n.All RBAC"
+    },
+    {
+        "value": "\u8bed\u8a00",
+        "keys": "Language",
+        "title": "configs.i18n.Language"
+    },
+    {
+        "value": "\u6a21\u5757",
+        "keys": "Module",
+        "title": "configs.i18n.Module"
+    },
+    {
+        "value": "\u7c7b\u522b",
+        "keys": "Section",
+        "title": "configs.i18n.Section"
+    },
+    {
+        "value": "\u952e",
+        "keys": "Key",
+        "title": "configs.i18n.Key"
+    },
+    {
+        "value": "\u503c",
+        "keys": "Value",
+        "title": "configs.i18n.Value"
+    },
+    {
+        "value": "\u53c2\u8003\u524d10",
+        "keys": "Reference Top 10",
+        "title": "configs.i18n.Reference Top 10"
+    },
+    {
+        "value": "\u5c0f\u5199\u5b57\u6bcd\u3001_\u6216\u8005\u6570\u5b57\u7ec4\u6210\uff0c\u5c0f\u5199\u5b57\u6bcd\u5f00\u5934\uff0c\u957f\u5ea62\u81f350\u4e2a\u5b57\u7b26",
+        "keys": "lower case letters (begin), _ or numbers,2 to 50 characters in length",
+        "title": "configs.i18n.lower case letters (begin), _ or numbers,2 to 50 characters in length"
+    },
+    {
+        "value": "\u9009\u62e9\u56fe\u7247",
+        "keys": "Choice Picture",
+        "title": "configs.i18n.Choice Picture"
+    },
+    {
+        "value": "\u9009\u62e9\u6587\u4ef6",
+        "keys": "Choice File",
+        "title": "configs.i18n.Choice File"
+    },
+    {
+        "value": "\u5f00\u59cb\u4e0a\u4f20",
+        "keys": "Start Uploading",
+        "title": "configs.i18n.Start Uploading"
+    },
+    {
+        "value": "\u6587\u4ef6\u7c7b\u578b",
+        "keys": "File Type",
+        "title": "configs.i18n.File Type"
+    },
+    {
+        "value": "\u5927\u5c0f",
+        "keys": "Size",
+        "title": "configs.i18n.Size"
+    },
+    {
+        "value": "\u5b58\u50a8",
+        "keys": "Storage",
+        "title": "configs.i18n.Storage"
+    },
+    {
+        "value": "\u56fe\u50cf\u5bbd\u5ea6",
+        "keys": "Image Width",
+        "title": "configs.i18n.Image Width"
+    },
+    {
+        "value": "\u56fe\u50cf\u9ad8\u5ea6",
+        "keys": "Image Height",
+        "title": "configs.i18n.Image Height"
+    },
+    {
+        "value": "\u4e0a\u4f20\u5931\u8d25",
+        "keys": "Upload failure",
+        "title": "configs.i18n.Upload failure"
+    },
+    {
+        "value": "\u4e0a\u4f20\u4e2d",
+        "keys": "Uploading",
+        "title": "configs.i18n.Uploading"
+    },
+    {
+        "value": "\u5df2\u4e0a\u4f20",
+        "keys": "Uploaded",
+        "title": "configs.i18n.Uploaded"
+    },
+    {
+        "value": "\u6682\u505c\u4e0a\u4f20",
+        "keys": "Suspend upload",
+        "title": "configs.i18n.Suspend upload"
+    },
+    {
+        "value": "\u7b49\u5f85\u4e0a\u4f20",
+        "keys": "Waiting for upload",
+        "title": "configs.i18n.Waiting for upload"
+    },
+    {
+        "value": "\u9884\u89c8",
+        "keys": "Preview",
+        "title": "configs.i18n.Preview"
+    },
+    {
+        "value": "\u6559\u80b2",
+        "keys": "education",
+        "title": "configs.i18n.education"
+    },
+    {
+        "value": "\u4f4d\u7f6e",
+        "keys": "location",
+        "title": "configs.i18n.location"
+    },
+    {
+        "value": "\u6280\u80fd",
+        "keys": "Skills",
+        "title": "configs.i18n.Skills"
+    },
+    {
+        "value": "\u5ea7\u4f51\u94ed",
+        "keys": "Motto",
+        "title": "configs.i18n.Motto"
+    },
+    {
+        "value": "\u57fa\u672c",
+        "keys": "Basic",
+        "title": "configs.i18n.Basic"
+    },
+    {
+        "value": "\u8be6\u7ec6",
+        "keys": "Detail",
+        "title": "configs.i18n.Detail"
+    },
+    {
+        "value": "\u90ae\u7f16",
+        "keys": "Postcode",
+        "title": "configs.i18n.Postcode"
+    },
+    {
+        "value": "\u624b\u673a",
+        "keys": "Mobilephone",
+        "title": "configs.i18n.Mobilephone"
+    },
+    {
+        "value": "\u56fa\u8bdd",
+        "keys": "Tel",
+        "title": "configs.i18n.Tel"
+    },
+    {
+        "value": "\u751f\u65e5",
+        "keys": "Birthday",
+        "title": "configs.i18n.Birthday"
+    },
+    {
+        "value": "\u8eab\u4efd\u8bc1",
+        "keys": "ID Number",
+        "title": "configs.i18n.ID Number"
+    },
+    {
+        "value": "\u5fae\u535a",
+        "keys": "Weibo",
+        "title": "configs.i18n.Weibo"
+    },
+    {
+        "value": "\u5fae\u4fe1",
+        "keys": "Weixin",
+        "title": "configs.i18n.Weixin"
+    },
+    {
+        "value": "\u59d3",
+        "keys": "Lastname",
+        "title": "configs.i18n.Lastname"
+    },
+    {
+        "value": "\u540d",
+        "keys": "Firstname",
+        "title": "configs.i18n.Firstname"
+    },
+    {
+        "value": "\u70b9\u51fb\u7f16\u8f91",
+        "keys": "Click Edit",
+        "title": "configs.i18n.Click Edit"
+    },
+    {
+        "value": "\u7528\u6237ID",
+        "keys": "User ID",
+        "title": "configs.i18n.User ID"
+    },
+    {
+        "value": "\u6765\u6e90",
+        "keys": "Referer",
+        "title": "configs.i18n.Referer"
+    },
+    {
+        "value": "\u8bf4\u660e",
+        "keys": "Description",
+        "title": "configs.i18n.Description"
+    },
+    {
+        "value": "\u521b\u5efa\u65f6\u95f4",
+        "keys": "Created Time",
+        "title": "configs.i18n.Created Time"
+    },
+    {
+        "value": "\u81ea\u52a8\u4ee3\u7801",
+        "keys": "Autocode",
+        "title": "configs.i18n.Autocode"
+    },
+    {
+        "value": "\u6a21\u5757\u7c7b\u540d",
+        "keys": "Module Class",
+        "title": "configs.i18n.Module Class"
+    },
+    {
+        "value": "\u8868\u540d",
+        "keys": "Table Name",
+        "title": "configs.i18n.Table Name"
+    },
+    {
+        "value": "\u6a21\u5757\u8bbe\u7f6e",
+        "keys": "Module Set",
+        "title": "configs.i18n.Module Set"
+    },
+    {
+        "value": "\u4f5c\u8005",
+        "keys": "Author",
+        "title": "configs.i18n.Author"
+    },
+    {
+        "value": "\u9879\u76ee",
+        "keys": "Project",
+        "title": "configs.i18n.Project"
+    },
+    {
+        "value": "\u6a21\u578b\u8bbe\u7f6e",
+        "keys": "Model Set",
+        "title": "configs.i18n.Model Set"
+    },
+    {
+        "value": "\u540d\u79f0",
+        "keys": "Name",
+        "title": "configs.i18n.Name"
+    },
+    {
+        "value": "\u7c7b\u578b",
+        "keys": "Type",
+        "title": "configs.i18n.Type"
+    },
+    {
+        "value": "\u7f3a\u7701",
+        "keys": "Default",
+        "title": "configs.i18n.Default"
+    },
+    {
+        "value": "\u552f\u4e00",
+        "keys": "Unique",
+        "title": "configs.i18n.Unique"
+    },
+    {
+        "value": "\u6bcf\u884c\u4e00\u4e2a\u53ef\u9009\u503c",
+        "keys": "An optional value per row",
+        "title": "configs.i18n.An optional value per row"
+    },
+    {
+        "value": "\u4ea7\u751f",
+        "keys": "Generate",
+        "title": "configs.i18n.Generate"
+    },
+    {
+        "value": "\u81ea\u52a8\u4ea7\u751f\u4ee3\u7801",
+        "keys": "Autocode Generate",
+        "title": "configs.i18n.Autocode Generate"
+    },
+    {
+        "value": "\u6a21\u5757\u5217\u8868",
+        "keys": "Modules List",
+        "title": "configs.i18n.Modules List"
+    },
+    {
+        "value": "\u8fc1\u79fb",
+        "keys": "Migrate",
+        "title": "configs.i18n.Migrate"
+    },
+    {
+        "value": "\u5347\u7ea7",
+        "keys": "Upgrade",
+        "title": "configs.i18n.Upgrade"
+    },
+    {
+        "value": "\u786e\u5b9a\u662f\u5426\u8fc1\u79fb",
+        "keys": "Are you sure you want to Migrate",
+        "title": "configs.i18n.Are you sure you want to Migrate"
+    },
+    {
+        "value": "\u786e\u5b9a\u662f\u5426\u5347\u7ea7",
+        "keys": "Are you sure you want to Upgrade",
+        "title": "configs.i18n.Are you sure you want to Upgrade"
+    },
+    {
+        "value": "\u6a21\u578b",
+        "keys": "Model",
+        "title": "configs.i18n.Model"
+    },
+    {
+        "value": "\u786e\u5b9a\u4ea7\u751f\u8d44\u6e90",
+        "keys": "Are you sure you want to generate resources",
+        "title": "configs.i18n.Are you sure you want to generate resources"
+    },
+    {
+        "value": "\u53c2\u6570",
+        "keys": "Parameter",
+        "title": "configs.i18n.Parameter"
+    },
+    {
+        "value": "\u964d\u7ea7",
+        "keys": "Downgrade",
+        "title": "configs.i18n.Downgrade"
+    },
+    {
+        "value": "\u7248\u672c",
+        "keys": "Revision",
+        "title": "configs.i18n.Revision"
+    },
+    {
+        "value": "\u6570\u636e\u8fc1\u79fb",
+        "keys": "Migrations",
+        "title": "configs.i18n.Migrations"
+    },
+    {
+        "value": "\u5207\u6362",
+        "keys": "Switch",
+        "title": "configs.i18n.Switch"
+    },
+    {
+        "value": "\u56fe\u50cf",
+        "keys": "Image",
+        "title": "configs.i18n.Image"
+    },
+    {
+        "value": "\u6587\u4ef6",
+        "keys": "File",
+        "title": "configs.i18n.File"
+    },
+    {
+        "value": "\u5c01\u9762",
+        "keys": "Cover",
+        "title": "configs.i18n.Cover"
+    },
+    {
+        "value": "\u8bf7\u9009\u62e9",
+        "keys": "Please Choice",
+        "title": "configs.i18n.Please Choice"
+    },
+    {
+        "value": "\u5173\u8054",
+        "keys": "Relation",
+        "title": "configs.i18n.Relation"
+    },
+    {
+        "value": "\u589e\u52a0\u5173\u8054",
+        "keys": "Add Relation",
+        "title": "configs.i18n.Add Relation"
+    },
+    {
+        "value": "\u5220\u9664\u5173\u8054",
+        "keys": "Delete Relation",
+        "title": "configs.i18n.Delete Relation"
+    },
+    {
+        "value": "\u5173\u8054\u5217\u8868",
+        "keys": "Relation List",
+        "title": "configs.i18n.Relation List"
+    },
+    {
+        "value": "\u6811",
+        "keys": "Tree",
+        "title": "configs.i18n.Tree"
+    },
+    {
+        "value": "\u662f\u5426\u65b0\u589e",
+        "keys": "Are you sure you want to add",
+        "title": "configs.i18n.Are you sure you want to add"
+    },
+    {
+        "value": "\u6f14\u793a",
+        "keys": "Demo",
+        "title": "configs.i18n.Demo"
+    },
+    {
+        "value": "\u4e34\u65f6",
+        "keys": "Temp",
+        "title": "configs.i18n.Temp"
+    },
+    {
+        "value": "\u9501\u5b9a",
+        "keys": "Locked",
+        "title": "configs.i18n.Locked"
+    },
+    {
+        "value": "\u672a\u9501",
+        "keys": "Unlocked",
+        "title": "configs.i18n.Unlocked"
+    },
+    {
+        "value": "\u522b\u540d",
+        "keys": "Alias",
+        "title": "configs.i18n.Alias"
+    },
+    {
+        "value": "\u94fe\u63a5",
+        "keys": "Link",
+        "title": "configs.i18n.Link"
+    },
+    {
+        "value": "\u5173\u952e\u5b57",
+        "keys": "Keywords",
+        "title": "configs.i18n.Keywords"
+    },
+    {
+        "value": "\u5206\u7c7b",
+        "keys": "Category",
+        "title": "configs.i18n.Category"
+    },
+    {
+        "value": "\u5185\u5bb9",
+        "keys": "Content",
+        "title": "configs.i18n.Content"
+    },
+    {
+        "value": "\u9009\u62e9\u6587\u4ef6",
+        "keys": "Add Attachment",
+        "title": "configs.i18n.Add Attachment"
+    },
+    {
+        "value": "\u540c\u65f6\u9009\u62e9\u591a\u4e2a\u6587\u4ef6\u6216\u6ca1\u6709\u9009\u62e9\u6587\u4ef6",
+        "keys": "Select multiple files at the same time or no files at the same time",
+        "title": "configs.i18n.Select multiple files at the same time or no files at the same time"
+    },
+    {
+        "value": "\u9644\u4ef6",
+        "keys": "attachment",
+        "title": "configs.i18n.attachment"
+    },
+    {
+        "value": "\u6392\u5e8f",
+        "keys": "order",
+        "title": "configs.i18n.order"
+    },
+    {
+        "value": "\u786e\u5b9a\u5c06\u6240\u6709\u8bb0\u5f55\u91cd\u65b0\u6392\u5e8f\u5417",
+        "keys": "Are you sure you want to reorder for all record",
+        "title": "configs.i18n.Are you sure you want to reorder for all record"
+    },
+    {
+        "value": "\u4efb\u52a1",
+        "keys": "Tasks",
+        "title": "configs.i18n.Tasks"
+    },
+    {
+        "value": "\u901a\u77e5\u7ba1\u7406",
+        "keys": "Notice",
+        "title": "configs.i18n.Notice"
+    },
+    {
+        "value": "\u5185\u5bb9\u7ba1\u7406",
+        "keys": "CMS",
+        "title": "configs.i18n.CMS"
+    },
+    {
+        "value": "\u65b0\u95fb",
+        "keys": "News",
+        "title": "configs.i18n.News"
+    },
+    {
+        "value": "\u624b\u518c",
+        "keys": "Books",
+        "title": "configs.i18n.Books"
+    },
+    {
+        "value": "\u4eba\u8138\u8bc6\u522b",
+        "keys": "Face Recognition",
+        "title": "configs.i18n.Face Recognition"
+    },
+    {
+        "value": "\u56fe\u50cf\u8bc6\u522b",
+        "keys": "Image Recognition",
+        "title": "configs.i18n.Image Recognition"
+    },
+    {
+        "value": "\u5bfc\u822a\u6761",
+        "keys": "Navigation",
+        "title": "configs.i18n.Navigation"
+    },
+    {
+        "value": "AI\u5b66\u4e60",
+        "keys": "AI Learn",
+        "title": "configs.i18n.AI Learn"
+    },
+    {
+        "value": "\u91d1\u878d\u6570\u636e\u91c7\u96c6",
+        "keys": "Finance Basic Data",
+        "title": "configs.i18n.Finance Basic Data"
+    },
+    {
+        "value": "\u91cf\u5316",
+        "keys": "Quant",
+        "title": "configs.i18n.Quant"
+    },
+    {
+        "value": "\u4efb\u52a1\u7cfb\u7edf",
+        "keys": "Tasks System",
+        "title": "configs.i18n.Tasks System"
+    },
+    {
+        "value": "\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0",
+        "keys": "Artificial Intelligence And Quant Platform",
+        "title": "configs.i18n.Artificial Intelligence And Quant Platform"
+    },
+    {
+        "value": "\u60a8\u6709",
+        "keys": "You have",
+        "title": "configs.i18n.You have"
+    },
+    {
+        "value": "\u901a\u77e5",
+        "keys": "notifications",
+        "title": "configs.i18n.notifications"
+    },
+    {
+        "value": "\u60a8\u6709\u901a\u77e5",
+        "keys": "You have notifications",
+        "title": "configs.i18n.You have notifications"
+    },
+    {
+        "value": "\u67e5\u770b\u6240\u6709",
+        "keys": "View all",
+        "title": "configs.i18n.View all"
+    },
+    {
+        "value": "\u6570\u636e\u66f4\u65b0",
+        "keys": "Stock Data Update",
+        "title": "configs.i18n.Stock Data Update"
+    },
+    {
+        "value": "\u66f4\u65b0\u4efb\u52a1",
+        "keys": "Stock Update Tasks",
+        "title": "configs.i18n.Stock Update Tasks"
+    },
+    {
+        "value": "\u66f4\u65b0\u4efb\u52a1\u8c03\u5ea6",
+        "keys": "Stock Update Schedules",
+        "title": "configs.i18n.Stock Update Schedules"
+    },
+    {
+        "value": "\u80a1\u7968\u57fa\u7840\u6570\u636e",
+        "keys": "Stock Basic Data",
+        "title": "configs.i18n.Stock Basic Data"
+    },
+    {
+        "value": "\u80a1\u7968\u57fa\u7840\u4fe1\u606f",
+        "keys": "Stock Basic Info",
+        "title": "configs.i18n.Stock Basic Info"
+    },
+    {
+        "value": "\u4ea4\u6613\u65e5\u5386",
+        "keys": "Trade Calendar",
+        "title": "configs.i18n.Trade Calendar"
+    },
+    {
+        "value": "\u884c\u60c5\u6570\u636e",
+        "keys": "Market Data",
+        "title": "configs.i18n.Market Data"
+    },
+    {
+        "value": "\u91d1\u878d\u6570\u636e",
+        "keys": "Financial Data",
+        "title": "configs.i18n.Financial Data"
+    },
+    {
+        "value": "\u5f15\u7528\u6570\u636e",
+        "keys": "Reference Data",
+        "title": "configs.i18n.Reference Data"
+    },
+    {
+        "value": "\u6307\u6570",
+        "keys": "Stock Index",
+        "title": "configs.i18n.Stock Index"
+    },
+    {
+        "value": null,
+        "keys": "\u6e2f\u80a1",
+        "title": "configs.i18n.\u6e2f\u80a1"
+    },
+    {
+        "value": "\u8d22\u7ecf\u65b0\u95fb",
+        "keys": "Financial News",
+        "title": "configs.i18n.Financial News"
+    },
+    {
+        "value": "\u6e2f\u80a1",
+        "keys": "Hongkong Stock",
+        "title": "configs.i18n.Hongkong Stock"
+    },
+    {
+        "value": "\u65e5\u7ebf",
+        "keys": "Stock Daily",
+        "title": "configs.i18n.Stock Daily"
+    },
+    {
+        "value": "\u91cf\u5316\u9009\u62e9\u5668",
+        "keys": "Quant Selector",
+        "title": "configs.i18n.Quant Selector"
+    },
+    {
+        "value": "\u91cf\u5316\u4ea4\u6613",
+        "keys": "Quant Trade",
+        "title": "configs.i18n.Quant Trade"
+    },
+    {
+        "value": "\u91cf\u5316\u4efb\u52a1",
+        "keys": "Quant Tasks",
+        "title": "configs.i18n.Quant Tasks"
+    },
+    {
+        "value": "\u91cf\u5316\u4fe1\u606f",
+        "keys": "Quant Info",
+        "title": "configs.i18n.Quant Info"
+    },
+    {
+        "value": "\u91cf\u5316\u5173\u6ce8",
+        "keys": "Quant Follow",
+        "title": "configs.i18n.Quant Follow"
+    },
+    {
+        "value": "\u91cf\u5316\u8bc1\u5238\u4ee3\u7801",
+        "keys": "Quant Stock Code",
+        "title": "configs.i18n.Quant Stock Code"
+    },
+    {
+        "value": "\u94fe\u63a5\u7c7b\u578b",
+        "keys": "Link Type",
+        "title": "configs.i18n.Link Type"
+    },
+    {
+        "value": "\u5185\u90e8\u94fe\u63a5",
+        "keys": "Inner Link",
+        "title": "configs.i18n.Inner Link"
+    },
+    {
+        "value": "\u5916\u90e8\u94fe\u63a5",
+        "keys": "Outer Link",
+        "title": "configs.i18n.Outer Link"
+    },
+    {
+        "value": "\u7528\u6237\u901a\u77e5",
+        "keys": "User Notice",
+        "title": "configs.i18n.User Notice"
+    },
+    {
+        "value": "\u901a\u77e5\u5185\u5bb9",
+        "keys": "Notice Content",
+        "title": "configs.i18n.Notice Content"
+    },
+    {
+        "value": "\u4efb\u52a1\u4fe1\u606f",
+        "keys": "Task Info",
+        "title": "configs.i18n.Task Info"
+    },
+    {
+        "value": "\u4efb\u52a1\u8c03\u5ea6",
+        "keys": "Task Schedule",
+        "title": "configs.i18n.Task Schedule"
+    },
+    {
+        "value": "\u591a\u5217\u552f\u4e00\u6027\u9650\u5236",
+        "keys": "Multi-Columns Unique",
+        "title": "configs.i18n.Multi-Columns Unique"
+    },
+    {
+        "value": "\u591a\u5217\u7d22\u5f15",
+        "keys": "Multi-Columns Index",
+        "title": "configs.i18n.Multi-Columns Index"
+    },
+    {
+        "value": "\u8868\u5355\u8bbe\u8ba1\u5668",
+        "keys": "Form Builder",
+        "title": "configs.i18n.Form Builder"
+    },
+    {
+        "value": "\u6a21\u677f",
+        "keys": "Template",
+        "title": "configs.i18n.Template"
+    },
+    {
+        "value": "\u533a\u5757",
+        "keys": "Block",
+        "title": "configs.i18n.Block"
+    },
+    {
+        "value": "\u8bc4\u8bba",
+        "keys": "Comments",
+        "title": "configs.i18n.Comments"
+    },
+    {
+        "value": "\u5185\u5bb9\u8bbe\u8ba1",
+        "keys": "CMS Layout",
+        "title": "configs.i18n.CMS Layout"
+    },
+    {
+        "value": "\u65b0\u95fb\u5206\u7c7b",
+        "keys": "News Category",
+        "title": "configs.i18n.News Category"
+    },
+    {
+        "value": "\u65b0\u95fb\u6587\u7ae0",
+        "keys": "News Articles",
+        "title": "configs.i18n.News Articles"
+    },
+    {
+        "value": "\u624b\u518c\u5206\u7c7b",
+        "keys": "Books Category",
+        "title": "configs.i18n.Books Category"
+    },
+    {
+        "value": "\u624b\u518c\u6587\u7ae0",
+        "keys": "Books Articles",
+        "title": "configs.i18n.Books Articles"
+    },
+    {
+        "value": "\u9996\u9875\u5bfc\u822a",
+        "keys": "Index Navigation",
+        "title": "configs.i18n.Index Navigation"
+    },
+    {
+        "value": "\u91cf\u5316\u4efb\u52a1\u8c03\u5ea6",
+        "keys": "Quant Task Schedule",
+        "title": "configs.i18n.Quant Task Schedule"
+    },
+    {
+        "value": "\u786e\u8ba4\u6216\u8005\u53d6\u6d88",
+        "keys": "OK OR CANCEL",
+        "title": "configs.i18n.OK OR CANCEL"
+    },
+    {
+        "value": "\u8bf7\u9009\u62e9\u76f8\u5173\u624b\u518c\u6216\u7ae0\u8282",
+        "keys": "Please Choice the book or the section",
+        "title": "configs.i18n.Please Choice the book or the section"
+    },
+    {
+        "value": "\u8bf7\u9009\u62e9\u76f8\u5173\u65b0\u95fb\u5206\u7c7b",
+        "keys": "Please select the relevant news category",
+        "title": "configs.i18n.Please select the relevant news category"
+    },
+    {
+        "value": "\u7b56\u7565\u5f00\u59cb\u65e5\u671f",
+        "keys": "Strategy Start Date",
+        "title": "configs.i18n.Strategy Start Date"
+    },
+    {
+        "value": "\u7b56\u7565\u7ed3\u675f\u65e5\u671f",
+        "keys": "Strategy End Date",
+        "title": "configs.i18n.Strategy End Date"
+    },
+    {
+        "value": "\u6570\u636e\u9891\u5ea6",
+        "keys": "Strategy Timeframe",
+        "title": "configs.i18n.Strategy Timeframe"
+    },
+    {
+        "value": "\u680f\u6570",
+        "keys": "Bars",
+        "title": "configs.i18n.Bars"
+    },
+    {
+        "value": "\u9009\u62e9\u590d\u6743\u65b9\u5f0f",
+        "keys": "Select Adj",
+        "title": "configs.i18n.Select Adj"
+    },
+    {
+        "value": "\u524d\u590d\u6743",
+        "keys": "Pre Adj",
+        "title": "configs.i18n.Pre Adj"
+    },
+    {
+        "value": "\u540e\u590d\u6743",
+        "keys": "Post Adj",
+        "title": "configs.i18n.Post Adj"
+    },
+    {
+        "value": "\u5c0f\u5b9d\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0",
+        "keys": "Bao AI And Quant Platform",
+        "title": "configs.i18n.Bao AI And Quant Platform"
+    },
+    {
+        "value": "\u5c0f\u5b9d\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0",
+        "keys": "baoai.title",
+        "title": "configs.i18n.baoai.title"
+    },
+    {
+        "value": "2018-2020",
+        "keys": "web.copyright.time",
+        "title": "configs.i18n.web.copyright.time"
+    },
+    {
+        "value": "http://www.ybao.org",
+        "keys": "web.copyright.url",
+        "title": "configs.i18n.web.copyright.url"
+    },
+    {
+        "value": "\u5e7f\u5dde\u6e90\u5b9d\u7f51\u7edc\u6709\u9650\u516c\u53f8",
+        "keys": "web.copyright.company",
+        "title": "configs.i18n.web.copyright.company"
+    },
+    {
+        "value": "http://www.beian.miit.gov.cn/",
+        "keys": "web.beian.url",
+        "title": "configs.i18n.web.beian.url"
+    },
+    {
+        "value": "\u7ca4ICP\u590716070361\u53f7",
+        "keys": "web.beian.code",
+        "title": "configs.i18n.web.beian.code"
+    },
+    {
+        "value": "http://www.baoai.co",
+        "keys": "web.url",
+        "title": "configs.i18n.web.url"
+    },
+    {
+        "value": "\u5c0f\u5b9d\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0",
+        "keys": "web.name",
+        "title": "configs.i18n.web.name"
+    },
+    {
+        "value": "\u63a8\u8350\u624b\u518c",
+        "keys": "Recommend Books",
+        "title": "configs.i18n.Recommend Books"
+    },
+    {
+        "value": "\u589e\u52a0\u4efb\u52a1",
+        "keys": "Add Task",
+        "title": "configs.i18n.Add Task"
+    },
+    {
+        "value": "\u6a21\u578b",
+        "keys": "Models",
+        "title": "configs.i18n.Models"
+    },
+    {
+        "value": "2.0.0",
+        "keys": "baoai.version",
+        "title": "configs.i18n.baoai.version"
+    },
+    {
+        "value": "https://github.com/henry",
+        "keys": "baoai.github",
+        "title": "configs.i18n.baoai.github"
+    },
+    {
+        "value": "https://gitee.com/henry",
+        "keys": "baoai.gitee",
+        "title": "configs.i18n.baoai.gitee"
+    },
+    {
+        "value": "http://www.baoai.co/web/book?id=50",
+        "keys": "baoai.devdoc",
+        "title": "configs.i18n.baoai.devdoc"
+    },
+    {
+        "value": "\u7248\u672c",
+        "keys": "Version",
+        "title": "configs.i18n.Version"
+    },
+    {
+        "value": "\u5f53\u524d\u7248\u672c",
+        "keys": "Current Version",
+        "title": "configs.i18n.Current Version"
+    },
+    {
+        "value": "\u6700\u65b0\u7248\u672c",
+        "keys": "Lastest Version",
+        "title": "configs.i18n.Lastest Version"
+    }
+]

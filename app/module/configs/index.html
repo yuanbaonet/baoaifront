@@ -1,0 +1,160 @@
+<!--
+/*!
+* configs template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+-->  
+  <!-- Main content -->
+  <section class="content" >
+      <div class="select">
+        <select id="select_lang" name="select_lang" class="form-control" ng-model="select.lang" required ng-change="langChange_select()">
+          <option ng-repeat="x in lang_list_all" value="{{x}}">{{x}}</option>
+        </select>
+        <select id="select_module" name="select_module" class="form-control" ng-model="select.module" ng-change="moduleChange_select()" >
+          <option value="">{{t('Please Choice')}}</option>
+          <option ng-repeat="x in select_modules" value="{{x.module_name}}">{{x.module_name}}</option>
+        </select>
+        <select id="select_section" name="select_section" class="form-control" ng-model="select.section" ng-change="sectionChange_select()" >
+          <option value="">{{t('Please Choice')}}</option>
+          <option ng-repeat="x in select_sections" value="{{x.section}}">{{x.section}}</option>
+        </select>
+      </div>
+      <div id="toolbar">
+        <button id="add" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+        </button>
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i>{{t('Delete')}}
+        </button>
+      </div>
+      <!-- modal add and edit -->
+      <div class="modal fade" id="modal-add-edit" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+              </div>
+              <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+              <div class="modal-body">
+                <p>
+                        <div class="form-group has-feedback">
+                          <label for="lang" class="control-label">{{t('Language')}}</label>
+                          <select class="form-control" ng-model="configs.lang" required ng-change="langChange()">
+                            <option ng-repeat="x in lang_list_all" value="{{x}}">{{x}}</option>
+                          </select>
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback" >
+                          <label for="module" class="control-label">{{t('Module')}}</label>
+                          <select id="module" name="module" class="form-control" ng-model="configs.module" ng-change="moduleChange()" required data-required-error="{{t('Required')}}">
+                                  <option value="">{{t('Please Choice')}}</option>
+                                  <option ng-repeat="x in modules" value="{{x.module_name}}">{{x.module_name}}</option>
+                          </select>
+                          <div class="help-block with-errors"></div>
+                        </div>                    
+                        <div class="form-group has-feedback">
+                          <label for="section" class="control-label">{{t('Section')}}</label>
+                          <select class="form-control" ng-model="configs.section" ng-change="sectionChange()" required data-required-error="{{t('Required')}}">
+                            <option value="">{{t('Please Choice')}}</option>
+                            <option ng-repeat="x in sections" value="{{x.section}}">{{x.section}}</option>
+                          </select>
+                          <p></p>
+                          <input type="text" class="form-control" id="section" placeholder="" required ng-model="configs.section" >
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="key" class="control-label">{{t('Key')}}</label>
+                          <input type="text" class="form-control" name="keys" id="keys" required ng-model="configs.keys">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="value" class="control-label">{{t('Value')}}</label>
+                          <textarea class="form-control" id="value" placeholder="" ng-model="configs.value" >
+                          </textarea>
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="weight" class="control-label">{{t('Weight')}}</label>
+                          <input type="number" class="form-control" id="weight" placeholder="" ng-model="configs.weight" >
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group">
+                          <label for="" class="control-label">{{t('Reference Top 10')}}</label>
+                          <div class="form-inline row" ng-repeat="x in keysvalue">
+                            <div class="form-group col-sm-6">
+                              <input type="text" class="form-control" disabled value="{{x.keys}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <textarea class="form-control" id="value" placeholder="" ng-model="x.value" disabled >
+                                </textarea>
+                            </div>
+                          </div>
+                        </div>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+              </div>
+            </form>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="1"
+      data-show-pagination-switch="true"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>
+    </section><!-- /.content -->
+  
+    <style>
+        .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+        #chooseicon {
+            margin:10px;
+        }
+        #chooseicon ul {
+            margin:5px 0 0 0;
+        }
+        #chooseicon ul li{
+            width:41px;height:42px;
+            line-height:42px;
+            border:1px solid #efefef;
+            padding:1px;
+            margin:1px;
+            text-align: center;
+            font-size:18px;
+        }
+        #chooseicon ul li:hover{
+            border:1px solid #2c3e50;
+            cursor:pointer;
+        }
+    </style>

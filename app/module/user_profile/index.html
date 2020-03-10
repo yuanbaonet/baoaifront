@@ -1,0 +1,317 @@
+<!--
+
+User Profile Module View
+
+PROJECT: BaoAI Front
+AUTHOR: henry <703264459@qq.com>
+WEBSITE: http://www.baoai.co
+COPYRIGHT: Copyright © 2016-2019 Guangzhou Yuanbao Network Co., Ltd. ( http://www.ybao.org )
+LICENSE: Apache-2.0
+CREATEDATE: 2019-11-30 02:22:26
+-->
+
+  <!-- Main content -->
+  <section class="content" >
+    <div class="row">
+      <div class="col-md-3">
+
+        <!-- Profile Image -->
+        <div class="box box-primary">
+          <div class="box-body box-profile">
+            <img class="profile-user-img img-responsive img-circle" src="{{user.real_avatar}}" alt="User profile picture">
+
+            <h3 class="profile-username text-center">{{user.nickname}}</h3>
+
+            <p class="text-muted text-center">{{user.title}}</p>
+
+            <ul class="list-group list-group-unbordered">
+              <li class="list-group-item">
+                <b>{{t('Account')}}</b> <a class="pull-right">{{user.username}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Email</b> <a class="pull-right">{{user.email}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>{{t('Username')}}</b> <a class="pull-right">{{profiles.lastname}} {{profiles.firstname}}</a>
+              </li>
+            </ul>
+
+            <a ui-sref="login" class="btn btn-primary btn-block" ng-click="logout()"><b>{{t('Exit')}}</b></a>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+        <!-- About Me Box -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">About Me</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <strong><i class="fa fa-book margin-r-5"></i> {{t('Education')}}</strong>
+            <p class="text-muted">
+              {{profiles.education}}
+            </p>
+            <hr>
+            <strong><i class="fa fa-map-marker margin-r-5"></i> {{t('Location')}}</strong>
+            <p class="text-muted">{{profiles.location}}</p>
+            <hr>
+            <strong><i class="fa fa-pencil margin-r-5"></i> {{t('Skills')}}</strong>
+            <p>
+                {{profiles.skills}}
+            </p>
+            <hr>
+            <strong><i class="fa fa-file-text-o margin-r-5"></i> {{t('Motto')}}</strong>
+            <p>{{profiles.motto}}</p>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-9">
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#settings" data-toggle="tab" onclick="return false">{{t('Basic')}}</a></li>
+            <li><a href="#activity" data-toggle="tab" onclick="return false">{{t('Detail')}}</a></li>          
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane" id="activity">
+              <!-- Post -->
+              <form data-toggle="validator" role="form" id="edit-profiles-form" action="" method="GET">
+                <div class="modal-body">
+                  <p>
+                          <input type="hidden" class="form-control" id="edit-profile-id"  value="{{profiles.id}}">
+                          <input type="hidden" class="form-control" id="edit-profile-uid"  value="{{profiles.uid}}">
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-career" class="control-label">{{t('Career')}}</label>                           
+                            <input type="text" class="form-control" id="edit-profile-career" placeholder="" ng-model="profiles.career">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group has-feedback">
+                              <label for="edit-profile-education" class="control-label">{{t('Education')}}</label>
+                              <input type="text" class="form-control" id="edit-profile-education" placeholder="" ng-model="profiles.education">
+                              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-location" class="control-label">{{t('Location')}}</label>
+                            <input type="text" class="form-control" id="edit-profile-location" placeholder="" ng-model="profiles.location">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div> 
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-postcode" class="control-label">{{t('Postcode')}}</label>
+                            <input type="text" class="form-control" id="edit-profile-postcode" placeholder="" ng-model="profiles.postcode">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div> 
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-mobilephone" class="control-label">{{t('Mobilephone')}}</label>
+                            <input type="text" class="form-control" id="edit-profile-mobilephone" placeholder="" ng-model="profiles.mobilephone">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div> 
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-tel" class="control-label">{{t('Tel')}}</label>
+                            <input type="text" class="form-control" id="edit-profile-tel" placeholder="" ng-model="profiles.tel">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div> 
+                          <div class="form-group has-feedback">
+                            <label for="edit-profile-skills" class="control-label">{{t('Skills')}}</label>
+                            <input type="text" class="form-control" id="edit-profile-skills" placeholder="" ng-model="profiles.skills">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-motto" class="control-label">{{t('Motto')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-motto" placeholder="" ng-model="profiles.motto">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-lastname" class="control-label">{{t('Lastname')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-lastname" placeholder="" ng-model="profiles.lastname">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-firstname" class="control-label">{{t('Firstname')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-firstname" placeholder="" ng-model="profiles.firstname">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-qq" class="control-label">QQ</label>
+                          <input type="text" class="form-control" id="edit-profile-qq" placeholder="" ng-model="profiles.qq">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-weixin" class="control-label">{{t('Weixin')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-weixin" placeholder="" ng-model="profiles.weixin">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-weibo" class="control-label">{{t('Weibo')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-weibo" placeholder="" ng-model="profiles.weibo">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-idnumber" class="control-label">{{t('ID Number')}}</label>
+                          <input type="text" class="form-control" id="edit-profile-idnumber" placeholder="" ng-model="profiles.idnumber">
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                        </div> 
+                        <div class="form-group has-feedback">
+                          <label for="edit-profile-birthday_" class="control-label">{{t('Birthday')}}</label>
+                          <div class="input-group date " id="dp_birthday">
+                          <!-- <div class="input-group date form_datetime " data-date="{{profiles.created}}" data-date-format="dd MM yyyy - HH:ii p" data-link-field="edit-profile-created"> -->
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input class="form-control" size="16" type="text" id="edit-profile-birthday_" ng-model="profiles.birthday_" >
+                          </div>
+                          <!-- <input type="hidden" id="edit-profile-created" value="{{profiles.created}}" /> -->
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="email_notice" class="control-label">Email Notice</label><p></p>
+                        <input type="checkbox" id="email_notice" class="js-switch form-control"  ng-model="profiles.email_notice" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="sms_notice" class="control-label">SMS Notice</label><p></p>
+                        <input type="checkbox" id="sms_notice" class="js-switch form-control"  ng-model="profiles.sms_notice" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="weixin_notice" class="control-label">Weixin Notice</label><p></p>
+                        <input type="checkbox" id="weixin_notice" class="js-switch form-control"  ng-model="profiles.weixin_notice" ui-switch="{color: '#1AB394'}"/>
+                      </div>            
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+                </div>
+              </form>
+              <!-- /.post -->
+            </div>
+
+            <div class="active tab-pane" id="settings">
+                <div class="profile-avatar-container">
+                    <img class="profile-user-img img-responsive img-circle plupload" src="{{user.real_avatar}}" id="edit-profile-avatar">
+                    <div class="profile-avatar-text img-circle">{{t('Click Edit')}}</div>
+                    <div id="filePicker" class="plupload" style="z-index: 1;"></div>
+                </div>
+                <form data-toggle="validator" role="form" id="edit-form" action="" method="GET">
+                    <div class="modal-body">
+                      <p>
+                              <div class="form-group has-feedback">
+                                  <input type="text" class="form-control" name="edit-avatar" id="edit-avatar" style="display: none;" ng-model="user.avatar">
+                              </div>                   
+                              <div class="form-group has-feedback">
+                                <label for="edit-username" class="control-label">{{t('Username')}}</label>
+                                <input type="hidden" class="form-control" id="edit-id"  value="{{user.uid}}">
+                                <input type="text" class="form-control" id="edit-username" placeholder="" required minlength="2" maxlength="16" ng-model="user.username" disabled>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="form-group has-feedback">
+                                  <label for="edit-nickname" class="control-label">{{t('Nickname')}}</label>
+                                  <input type="text" class="form-control" id="edit-nickname" placeholder="" ng-model="user.nickname">
+                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                  <div class="help-block with-errors"></div>
+                              </div> 
+                              <div class="form-group has-feedback">
+                                <label for="edit-email" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="edit-email" placeholder="" data-error="{{t('Format error')}}" ng-model="user.email" disabled>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="form-group">
+                                <label for="edit-inputPassword" class="control-label">{{t('Password')}}</label>
+                                <div class="form-inline row">
+                                  <div class="form-group col-sm-6">
+                                    <input type="password" class="form-control" id="edit-inputPassword" placeholder="Password"  ng-model="user.password_hash" value="">
+                                  </div>
+                                  <div class="form-group col-sm-6">
+                                    <input type="password" class="form-control" id="edit-inputPasswordConfirm" data-match="#edit-inputPassword" data-match-error="{{t('password do not match')}}" placeholder="Confirm"   ng-model="user.password_hash_confirm" value="">
+                                    <div class="help-block with-errors"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group has-feedback">
+                                <label for="edit-title" class="control-label">{{t('Remark')}}</label>
+                                <input type="text" class="form-control" id="edit-title" placeholder="" ng-model="user.title">
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div> 
+                 
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+                    </div>
+                  </form>
+            </div>
+            <!-- /.tab-pane -->
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </div>
+    </section><!-- /.content -->
+  
+    <style>
+      .profile-avatar-container {
+          position: relative;
+          width: 100px;
+          margin: 0 auto;
+      }
+      
+      .profile-avatar-container .profile-user-img {
+          width: 100px;
+          height: 100px;
+      }
+
+      .profile-avatar-container .profile-avatar-text {
+          display: none;
+      }
+
+      .profile-avatar-container:hover .profile-avatar-text {
+          display: block;
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          background: #444;
+          opacity: .6;
+          color: #fff;
+          top: 0;
+          left: 0;
+          line-height: 100px;
+          text-align: center;
+      }
+
+      .profile-avatar-container .webuploader-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: 100px;
+          opacity: 0;
+      }
+
+      .profile-avatar-container .webuploader-pick{
+        width: 100px;
+        height: 100px;      
+      }
+
+      .profile-avatar-container input{
+        width: 100%;
+        height: 100%;      
+      }
+    </style>

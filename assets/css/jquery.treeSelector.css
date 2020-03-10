@@ -1,0 +1,141 @@
+.treeSelector-container {
+  position: relative;
+  /*width: 400px;*/
+  width: 100%;
+}
+
+.treeSelector-container ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.treeSelector-container li.treeSelector-li {
+  padding-left: 0;
+  list-style: none;
+}
+
+.treeSelector-container .treeSelector-input-box {
+  /* min-height: 32px; */
+  min-height: 34px;
+  background-color: #fff;
+  /* padding-left: 5px; */
+  padding-left: 10px;
+  border: 1px solid #dbe1e2;
+  /* border-radius: 3px; */
+}
+
+.treeSelector-container .treeSelector-input-box .title-item {
+  display: inline-block;
+  background-color: #e4e4e4;
+  border: 1px solid #aaa;
+  color: #425050;
+  border-radius: 4px;
+  cursor: default;
+  padding: 0px 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+.treeSelector-container .treeSelector-input-box .title-item .fa {
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+span.treeSelector-li-title {
+  margin-left:5px;
+}
+
+.treeSelector-container li.treeSelector-li .treeSelector-li-title-box {
+  cursor: pointer;
+}
+
+.treeSelector-container li.treeSelector-li .treeSelector-li-title-box:hover {
+  background-color: #f3f3f3;
+}
+
+.treeSelector-container li.treeSelector-li.level-1 .treeSelector-li-title-box{
+  padding-left: 20px; color: red;
+}
+.treeSelector-container li.treeSelector-li.level-2 .treeSelector-li-title-box {
+  padding-left: 40px; color: blue;
+}
+.treeSelector-container li.treeSelector-li.level-3 .treeSelector-li-title-box {
+  padding-left: 60px; color: green;
+}
+.treeSelector-container li.treeSelector-li.level-4 .treeSelector-li-title-box {
+  padding-left: 80px; color: rgb(213, 103, 235);
+}
+
+.treeSelector-container li.treeSelector-li.level-5 .treeSelector-li-title-box {
+  padding-left: 100px; color: rgb(4, 53, 32);
+}
+
+.treeSelector-container li.treeSelector-li.level-6 .treeSelector-li-title-box {
+  padding-left: 120px; color: rgb(106, 35, 221);
+}
+
+.treeSelector-container li.treeSelector-li.level-7 .treeSelector-li-title-box {
+  padding-left: 140px; color: rgb(9, 1, 22);
+}
+
+.treeSelector-container li.treeSelector-li.level-8 .treeSelector-li-title-box {
+  padding-left: 160px;
+}
+
+.treeSelector-container label.treeSelector-li-title-box {
+  display: inherit;
+  padding: 4px 0;
+}
+
+.treeSelector-container label.treeSelector-li-title-box input[type=radio] {
+  margin-right: 5px;
+}
+
+.treeSelector-container label.treeSelector-li-title-box input[type=checkbox] {
+  margin-right: 5px;
+}
+
+.treeSelector-container .treeSelector-wrapper {
+  display: none;
+}
+
+.treeSelector-container .treeSelector-wrapper.visible {
+  display: block;
+  position: absolute;
+  left: 0;
+  /* max-height: 200px; */
+  max-height: 300px;
+  overflow: auto;
+  /* width: 400px; */
+  width: 100%;
+  padding-left: 10px;
+  background: #fff;
+  border: 1px solid #dbe1e2;
+  /* z-index: 2; */
+  z-index: 10000;
+}
+
+.treeSelector-container.disabled {
+  cursor: not-allowed;
+  background: #f3f3f3;
+}
+
+.treeSelector-container.disabled .treeSelector-input-box {
+  background: #eee;
+  border-color: #d2d6de;
+}
+
+.treeSelector-container.disabled .title-item {
+  cursor: not-allowed;
+}
+
+.treeSelector-container.disabled .title-item .fa-times {
+  display: none;
+}
+
+.treeSelector-container.no-options .treeSelector-input-box {
+  padding-top: 5px;
+  color: #999;
+  user-select: none;
+}

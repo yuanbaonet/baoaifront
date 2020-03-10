@@ -1,0 +1,44 @@
+{
+  "name": "baoaifront",
+  "version": "1.0.0",
+  "description": "小宝人工智能和量化平台前端部份",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanbaonet/baoaifront.git"
+  },
+  "keywords": [
+    "小宝人工智能和量化平台",
+    "前端"
+  ],
+  "author": "Henry <703264459@qq.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yuanbaonet/baoaifront/issues"
+  },
+  "homepage": "https://github.com/yuanbaonet/baoaifront#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rev-append": "^0.1.8",
+    "gulp-size": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "http-proxy-middleware": "^0.20.0",
+    "jshint": "^2.11.0-rc1",
+    "jshint-stylish": "^2.2.1",
+    "url": "^0.11.0"
+  }
+}

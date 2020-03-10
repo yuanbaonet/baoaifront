@@ -1,0 +1,56 @@
+{
+    "total": 3,
+    "rows": [
+        {
+            "locked": false,
+            "created": "2019-04-29T03:24:17+00:00",
+            "remark": "",
+            "status": true,
+            "treegrade": null,
+            "weight": 9999,
+            "treepathweight": null,
+            "resources": "691,700,701,702,703,704,705,706,707,708,709,710,711,92,67,68,94,80,81,82,83,699,75,39,61,90,93",
+            "pid": 0,
+            "updated": "2019-06-25T22:05:54+00:00",
+            "uid": 0,
+            "title": "General Administrator",
+            "id": 2,
+            "lang": "",
+            "treepath": null
+        },
+        {
+            "locked": false,
+            "created": "2019-04-24T13:43:30+00:00",
+            "remark": "",
+            "status": true,
+            "treegrade": null,
+            "weight": 900,
+            "treepathweight": null,
+            "resources": "381,382,383,384,385,386,387,388,739,741,740,691,700,701,702,703,704,705,706,707,708,709,710,711,69,70,107,72,73,74,71,91,92,345,477,76,77,78,79,84,85,86,87,89,88,743,744,453,454,455,456,457,458,469,474,459,472,473,460,461,462,681,682,67,68,94,80,81,82,83,699,25,26,75,38,39,40,37,61,106,62,90,27,33,34,35,36,104,65,28,29,30,31,32,95,41,66,93,109,390",
+            "pid": 0,
+            "updated": "2019-11-06T12:54:04+00:00",
+            "uid": 0,
+            "title": "Super Administrator",
+            "id": 1,
+            "lang": "",
+            "treepath": null
+        },
+        {
+            "locked": false,
+            "created": "2019-06-01T10:40:56+00:00",
+            "remark": "",
+            "status": true,
+            "treegrade": null,
+            "weight": 111,
+            "treepathweight": null,
+            "resources": "67,68,94,80,81,82,83,699",
+            "pid": 0,
+            "updated": "2019-08-04T09:08:23+00:00",
+            "uid": 0,
+            "title": "Guest",
+            "id": 17,
+            "lang": "",
+            "treepath": null
+        }
+    ]
+}

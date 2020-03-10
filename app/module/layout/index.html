@@ -1,0 +1,123 @@
+<!--
+/*!
+* layout template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+--> 
+<div class="wrapper" >
+    <header class="main-header" ng-include="'app/module/layout/include/header.html'" ng-hide="hide_header">
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" ng-hide="hide_main_sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="{{user.real_avatar}}" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p ng-bind="user.name"></p>
+            <a href="#"><i class="fa fa-circle text-success"></i> {{t('Online')}}</a>
+          </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search..." ng-model="_search_key">
+            <span class="input-group-btn">
+              <button type="button" name="search" id="search-btn" class="btn btn-flat" ng-click="search()"><i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree" compile="menu">
+          <li class="header">HEADER</li>
+          <!-- Optionally, you can add icons to the links -->
+          <li ui-sref="app.main" ui-sref-active="active"><a href=""><i class="fa fa-dashboard"></i> 
+            <span>{{t('dashboard')}}</span></a>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">      
+        <span><a ui-sref="app.main" ui-sref-active="active"><i class="fa fa-dashboard"></i> {{t('dashboard')}}</a></span>
+        <!-- <span ng-bind-html="breadcrumb"></span> -->
+        <span recompile="breadcrumb"></span>
+
+        <span ng-bind-html="remark" style="float:right;color:grey;"></span>
+      </section>
+  
+      <!-- Main content -->
+      <section ui-view class="content">
+        <!-- Small boxes (Stat box) -->
+  
+        <!-- /.row (main row) -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer" ng-include="'app/module/layout/include/footer.html'">
+    </footer>
+  
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab" onclick="return false"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab" onclick="return false" ><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab" ng-include="'app/module/layout/include/sidebar-home.html'">
+        </div>
+        <!-- /.tab-pane -->       
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab" ng-include="'app/module/layout/include/sidebar-settings.html'">
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+
+  <style>
+   .content {
+      min-height: 250px;
+      padding-top: 5px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px; 
+    }
+    .show-content img {
+      /*display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #E5E5E5;
+      padding: 3px;
+      box-shadow: none;
+      margin: 10px 0;*/
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  
+  

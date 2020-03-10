@@ -1,0 +1,56 @@
+{
+    "total": 3,
+    "rows": [
+        {
+            "weight": 0,
+            "uid": 1,
+            "module": "web.news",
+            "updated": "2019-12-01T03:07:53+00:00",
+            "content": "<p><a href=\"http://localhost:3000/#/web/article?id=180\">BaoAI \u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0 V1.0.0 \u7248\u672c\u53d1\u5e03\u4e86</a></p>\n",
+            "reference": "web.article",
+            "receiver": null,
+            "pid": 0,
+            "created": "2019-12-01T02:14:47+00:00",
+            "reference_params": "{id:180}",
+            "id": 3,
+            "lang": "zh-cn",
+            "title": "BaoAI \u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u5e73\u53f0 V1.0.0 \u7248\u672c\u53d1\u5e03\u4e86",
+            "status": false,
+            "icon": ""
+        },
+        {
+            "weight": 0,
+            "uid": 1,
+            "module": "quant_stockcode",
+            "updated": "2019-11-30T06:59:04+00:00",
+            "content": "<p>\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u4ece\u8fd9\u5f00\u59cb</p>\n",
+            "reference": "web.book",
+            "receiver": null,
+            "pid": 0,
+            "created": "2019-11-30T06:24:54+00:00",
+            "reference_params": "{id:8}",
+            "id": 2,
+            "lang": "zh-cn",
+            "title": "\u4eba\u5de5\u667a\u80fd\u548c\u91cf\u5316\u4ece\u8fd9\u5f00\u59cb",
+            "status": true,
+            "icon": "fa fa-circle-o"
+        },
+        {
+            "weight": 12,
+            "uid": 1,
+            "module": "quant_category",
+            "updated": "2020-01-02T12:57:07+00:00",
+            "content": "<p>\u91cf\u5316\u7cfb\u7edf\u4e0a\u7ebf\u4e86</p>\n",
+            "reference": "web.quant",
+            "receiver": null,
+            "pid": 0,
+            "created": "2019-11-30T06:24:07+00:00",
+            "reference_params": null,
+            "id": 1,
+            "lang": "zh-cn",
+            "title": "\u91cf\u5316\u7cfb\u7edf\u4e0a\u7ebf\u4e86",
+            "status": true,
+            "icon": null
+        }
+    ]
+}

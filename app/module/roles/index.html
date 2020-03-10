@@ -1,0 +1,133 @@
+<!--
+
+Roles Module View
+
+PROJECT: BaoAI Front
+AUTHOR: henry <703264459@qq.com>
+WEBSITE: http://www.baoai.co
+COPYRIGHT: Copyright © 2016-2019 Guangzhou Yuanbao Network Co., Ltd. ( http://www.ybao.org )
+LICENSE: Apache-2.0
+-->
+  <!-- Main content -->
+  <section class="content" >
+    <div id="toolbar">
+      <button id="add" class="btn btn-success" data-toggle="modal" >
+          <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+      </button>
+      <button id="remove" class="btn btn-danger" disabled>
+        <i class="glyphicon glyphicon-remove"></i>{{t('Delete')}}
+      </button>
+    </div>
+    <!-- modal add or edit -->
+    <div class="modal fade" id="modal-add-edit" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+            </div>
+            <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                      <div class="form-group has-feedback">
+                          <label for="locked" class="control-label">{{t('Locked')}}</label><p></p>
+                          <input type="checkbox" id="locked" class="js-switch form-control"  ng-model="roles.locked" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="status" class="status">{{t('Status')}}</label><p></p>
+                        <input type="checkbox" id="status" class="js-switch form-control"  ng-model="roles.status" ui-switch="{color: '#1AB394'}"/>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="pid" class="control-label">{{t('Parents')}}</label>
+                        <input type="hidden" class="form-control" name="pid" id="pid" value="{{roles.pid}}">
+                        <div class="resources-container" style="width:100%">
+                          <div class="treeSelector" ></div>
+                        </div>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>                    
+                      <div class="form-group has-feedback">
+                        <label for="title" class="control-label">{{t('Title')}}</label>
+                        <input type="text" class="form-control" id="title" placeholder="" ng-model="roles.otitle" required  data-required-error="{{t('Required')}}">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="resources" class="control-label">{{t('Resources')}}</label>
+                        <input type="hidden" class="form-control" name="resources" id="resources" value="{{roles.resources}}">
+                        <div class="resources-container" style="width:100%">
+                          <div class="treeSelectorResources" ></div>
+                        </div>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="weight" class="control-label">{{t('Weight')}}</label>
+                        <input type="number" class="form-control" id="weight" placeholder="" ng-model="roles.weight" required data-required-error="{{t('Required')}}">
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <label for="remark" class="control-label">{{t('Remark')}}</label>
+                          <textarea class="form-control" id="remark" placeholder="" ng-model="roles.remark"></textarea>
+                          <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                          <div class="help-block with-errors"></div>
+                      </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+    <table
+    id="table"
+    data-mobile-responsive="true"
+    data-locale="{{lang}}"
+    data-toolbar="#toolbar"
+    data-show-refresh="true"
+    data-show-toggle="true"
+    data-show-fullscreen="true"
+    data-show-columns="true"
+    data-detail-view="true"
+    data-show-export="true"
+    data-minimum-count-columns="1"
+    data-show-pagination-switch="true"
+    data-id-field="id"
+    data-show-footer="true"
+    data-side-pagination="server"
+    >
+    </table>
+  </section><!-- /.content -->
+
+  <style>
+      .dropdown-menu input[type=checkbox]{
+        margin-right: 10px;
+      }
+      #chooseicon {
+          margin:10px;
+      }
+      #chooseicon ul {
+          margin:5px 0 0 0;
+      }
+      #chooseicon ul li{
+          width:41px;height:42px;
+          line-height:42px;
+          border:1px solid #efefef;
+          padding:1px;
+          margin:1px;
+          text-align: center;
+          font-size:18px;
+      }
+      #chooseicon ul li:hover{
+          border:1px solid #2c3e50;
+          cursor:pointer;
+      }
+  </style>

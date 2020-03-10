@@ -1,0 +1,82 @@
+[
+    {
+        "value": "English",
+        "keys": "en",
+        "title": "configs.i18n.en"
+    },
+    {
+        "value": "Simplified Chinese",
+        "keys": "zh-cn",
+        "title": "configs.i18n.zh-cn"
+    },
+    {
+        "value": "Title",
+        "keys": "title",
+        "title": "configs.i18n.title"
+    },
+    {
+        "value": "The system complies with Apache 2.0 protocol<br>\nCopyright: Guangzhou Yuanbao Network Co., Ltd. (http://www.ybao.org)<br>\nSystem Official Website: http://www.baoai.co",
+        "keys": "agreement",
+        "title": "configs.i18n.agreement"
+    },
+    {
+        "value": "Bao AI And Quant Platform",
+        "keys": "baoai.title",
+        "title": "configs.i18n.baoai.title"
+    },
+    {
+        "value": "2018-2020",
+        "keys": "web.copyright.time",
+        "title": "configs.i18n.web.copyright.time"
+    },
+    {
+        "value": "http://www.ybao.org",
+        "keys": "web.copyright.url",
+        "title": "configs.i18n.web.copyright.url"
+    },
+    {
+        "value": "Guangzhou Yuanbao Network Limited company",
+        "keys": "web.copyright.company",
+        "title": "configs.i18n.web.copyright.company"
+    },
+    {
+        "value": "http://www.beian.miit.gov.cn/",
+        "keys": "web.beian.url",
+        "title": "configs.i18n.web.beian.url"
+    },
+    {
+        "value": "\u7ca4ICP\u590716070361\u53f7",
+        "keys": "web.beian.code",
+        "title": "configs.i18n.web.beian.code"
+    },
+    {
+        "value": "http://www.baoai.co",
+        "keys": "web.url",
+        "title": "configs.i18n.web.url"
+    },
+    {
+        "value": "Bao AI And Quant Platform",
+        "keys": "web.name",
+        "title": "configs.i18n.web.name"
+    },
+    {
+        "value": "2.0.0",
+        "keys": "baoai.version",
+        "title": "configs.i18n.baoai.version"
+    },
+    {
+        "value": "https://github.com/henry",
+        "keys": "baoai.github",
+        "title": "configs.i18n.baoai.github"
+    },
+    {
+        "value": "https://gitee.com/henry",
+        "keys": "baoai.gitee",
+        "title": "configs.i18n.baoai.gitee"
+    },
+    {
+        "value": "http://www.baoai.co/web/book?id=50",
+        "keys": "baoai.devdoc",
+        "title": "configs.i18n.baoai.devdoc"
+    }
+]

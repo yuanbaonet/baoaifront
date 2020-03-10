@@ -1,0 +1,275 @@
+<!--
+
+Resources Module View
+
+PROJECT: BaoAI Front
+AUTHOR: henry <703264459@qq.com>
+WEBSITE: http://www.baoai.co
+COPYRIGHT: Copyright © 2016-2019 Guangzhou Yuanbao Network Co., Ltd. ( http://www.ybao.org )
+LICENSE: Apache-2.0
+-->
+  <!-- Main content -->
+  <section class="content" >
+    <div id="toolbar">
+      <button id="add" class="btn btn-success" data-toggle="modal" >
+          <i class="glyphicon glyphicon-plus"></i> {{t('Add')}}
+      </button>
+      <button id="remove" class="btn btn-danger" disabled>
+        <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+      </button>
+      <button id="order" class="btn btn-success" data-toggle="modal" >
+        <i class="glyphicon glyphicon-sort-by-attributes-alt"></i> {{t('Order')}}
+      </button>
+    </div>
+
+    <!-- modal add or edit -->
+    <div class="modal fade" id="modal-add-edit" data-backdrop="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+          </div>
+          <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+          <div class="modal-body">
+            <p>
+              <div class="form-group has-feedback">
+                  <label for="locked" class="control-label">{{t('Locked')}}</label><p></p>
+                  <input type="checkbox" id="locked" class="js-switch form-control"  ng-model="resources.locked" ui-switch="{color: '#1AB394'}"/>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="ismenu" class="ismenu">{{t('Menu')}}</label><p></p>
+                <input type="checkbox" id="ismenu" class="js-switch form-control"  ng-model="resources.ismenu" ui-switch="{color: '#1AB394'}"/>
+              </div>
+              <!-- <div class="form-group radio icheck">
+                  <label class="control-label">{{t('Menu')}}</label>
+                  <div class="form-inline row">
+                    <div class="form-group col-sm-3">
+                      <div class="radio ">
+                        <label>
+                          <input type="radio" name="ismenu" ng-value="1" ng-model="resources.ismenu" ng-icheck>
+                          {{t('Menu')}}
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="ismenu" ng-value="0" ng-model="resources.ismenu" ng-icheck>
+                          {{t('Feature')}}
+                        </label>
+                      </div>
+                    </div>
+                  </div> 
+              </div> -->
+              <div class="form-group has-feedback">
+                <label for="status" class="status">{{t('Status')}}</label><p></p>
+                <input type="checkbox" id="status" class="js-switch form-control"  ng-model="resources.status" ui-switch="{color: '#1AB394'}"/>
+              </div>
+              <!-- <div class="form-group radio icheck">
+                <label class="control-label">{{t('Status')}}</label>
+                <div class="form-inline row">
+                  <div class="form-group col-sm-3">
+                    <div class="radio ">
+                      <label>
+                        <input type="radio" name="status" ng-value="1" ng-model="resources.status" ng-icheck>
+                        {{t('Normal')}}
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="status" ng-value="0" ng-model="resources.status" ng-icheck>
+                        {{t('Pause')}}
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="status" ng-value="2" ng-model="resources.status" ng-icheck>
+                        {{t('Reserve')}}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="form-group has-feedback">
+                <label for="pid" class="control-label">{{t('Parents')}}</label>
+                <input type="hidden" class="form-control" name="pid" id="pid" value="{{resources.pid}}">
+                <div class="resources-container" style="width:100%">
+                  <div class="treeSelector" ></div>
+                </div>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="name" class="control-label">{{t('Resources')}}</label>
+                <input type="text" class="form-control" id="name" 
+                  placeholder="{{t('lower case letters (begin), _ or numbers,2 to 50 characters in length')}}" 
+                  required pattern="^[a-z]{1}([a-z0-9_]{1,49})$" data-required-error="{{t('Required')}}" 
+                  data-pattern-error="{{t('lower case letters (begin), _ or numbers,2 to 50 characters in length')}}" ng-model="resources.name" >
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>                      
+              <div class="form-group has-feedback">
+                <label for="title" class="control-label">{{t('Title')}}</label>
+                <input type="text" class="form-control" id="title" placeholder="" ng-model="resources.title" required  data-required-error="{{t('Required')}}">
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                  <label for="icon" class="control-label">{{t('Icon')}}</label>
+                  <div class="input-group">
+                    <a href="javascript:;" class="btn-search-icon input-group-addon">{{t('Search')}}&nbsp;{{t('Icon')}}</a>
+                    <input type="text" class="form-control" id="icon" placeholder="" ng-model="resources.icon" required  data-required-error="{{t('Required')}}">
+                  </div>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback" ng-hide="link_type_hide">
+                  <label for="link_type" class="control-label">{{t('Link Type')}}</label>
+                  <select id="link_type" name="link_type" class="form-control" ng-model="resources.link_type" ng-change="link_type_change()">
+                          <option value="">{{t('Please Choice')}}</option>
+                          <option value="Inner Link">{{t('Inner Link')}}</option>
+                          <option value="Outer Link">{{t('Outer Link')}}</option>
+                  </select>
+                  <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="route" class="control-label">{{t('Route')}}</label>
+                <input type="text" class="form-control" id="route" placeholder="" ng-model="resources.route" required data-required-error="{{t('Required')}}">
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="params" class="control-label">{{t('Parameter')}}</label>
+                <input type="text" class="form-control" id="params" placeholder="ui-sref transfer parameters, for example: {module_id:0}" ng-model="resources.params" >
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                <label for="weight" class="control-label">{{t('Weight')}}</label>
+                <input type="number" class="form-control" id="weight" placeholder="" ng-model="resources.weight" required data-required-error="{{t('Required')}}">
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                  <label for="method" class="control-label">{{t('Method')}}</label>
+                  <select id="method" name="method" class="form-control" ng-model="resources.method" required data-required-error="{{t('Required')}}">
+                          <option value="">{{t('Please Choice')}}</option>
+                      　　<option value="GET">GET</option>
+                      　　<option value="POST">POST</option>
+                      　　<option value="PUT">PUT</option>
+                      　　<option value="DELETE">DELETE</option>
+                      　　<option value="OPTIONS">OPTIONS</option>
+                  </select>
+                  <!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
+                  <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback">
+                  <label for="remark" class="control-label">{{t('Remark')}}</label>
+                  <textarea class="form-control" id="remark" placeholder="" ng-model="resources.remark" ></textarea>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+              </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+          </div>
+        </form>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- modal icon -->
+    <div class="modal fade" id="modal-icon" style="padding-left: 0px;" data-backdrop="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <button type="button" class="close" id="modal-icon-close" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title"><b>{{t('Icon')}}&nbsp;{{t('Search')}}</b></h4>
+          </div>
+          <form data-toggle="validator" role="form" id="search-icon-form" action="" method="GET">
+          <div class="modal-body">
+            <p>
+
+                    <div id="chooseicon">
+                        <div>
+                            <form onsubmit="return false;">
+                                <div class="input-group input-groupp-md">
+                                    <div class="input-group-addon">{{t('Search')}}</div>
+                                    <input class="js-icon-search form-control" type="text" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div id='chooseicon-list'>
+                            <ul class="list-inline" >                                   
+                                <li ng-repeat="x in iconlist" data-font="{{x}}" data-toggle="tooltip" title="{{x}}" ng-click="iconselect(x)">
+                                    <i class="fa fa-{{x}}"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </p>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </form>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <table
+    id="table"
+    data-mobile-responsive="true"
+    data-locale="{{lang}}"
+    data-toolbar="#toolbar"
+    data-show-refresh="true"
+    data-show-toggle="true"
+    data-show-fullscreen="true"
+    data-show-columns="true"
+    data-detail-view="true"
+    data-show-export="true"
+    data-minimum-count-columns="1"
+    data-id-field="id"
+    data-show-footer="true"
+    data-side-pagination="server"
+    >
+    </table>
+  </section><!-- /.content -->
+
+  <style>
+      .dropdown-menu input[type=checkbox]{
+        margin-right: 10px;
+      }
+      #chooseicon {
+          margin:10px;
+      }
+      #chooseicon ul {
+          margin:5px 0 0 0;
+      }
+      #chooseicon ul li{
+          width:41px;height:42px;
+          line-height:42px;
+          border:1px solid #efefef;
+          padding:1px;
+          margin:1px;
+          text-align: center;
+          font-size:18px;
+      }
+      #chooseicon ul li:hover{
+          border:1px solid #2c3e50;
+          cursor:pointer;
+      }
+  </style>

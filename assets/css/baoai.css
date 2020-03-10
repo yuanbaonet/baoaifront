@@ -1,0 +1,35 @@
+input[type=checkbox]{
+    margin: 0px;
+} 
+   
+input[type=checkbox]:after  {
+    content: "";
+    display:block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 14px;
+    font-size: 16px;
+    color: #fff;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-sizing:border-box;
+
+}
+
+input[type=checkbox]:checked:after  {
+    content: '\2714';
+    background-color: #5774FF;
+    border: 2px solid #5774FF;
+}
+
+.ng-ckeditor{border:0}
+
+.modal-content{
+    border-radius: 10px;
+}
+
+.modal-header{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

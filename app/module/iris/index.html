@@ -1,0 +1,329 @@
+<!--
+/*!
+* IRIS template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+-->  
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-sm-12">
+        <!--Baoai box -->
+        <div class="box bookbox" ng-hide="figure_hide">
+          <div class="box-header with-border">
+            <h3 class="box-title">鸢尾花-特征关系图</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="more" data-toggle="tooltip" title="More"
+                ng-click="more(9)">
+                <i class="fa fa-angle-double-right"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                title="Collapse">
+                <i class="fa fa-minus"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <strong>BaoAI 鸢尾花特征关系图</strong>
+            <p></p>
+            <p>萼片长度、萼片宽度、花瓣长度和花瓣宽度之间关系图。</p>
+  
+            <div class="form-group has-feedback">
+              <!-- <label class="control-label">{{t('预测结果')}}:</label> -->
+              <div id='show_result' ng-bind-html="show_result">
+  
+              </div>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /.box-body -->
+          <!-- <div class="box-footer">
+                  Footer
+                </div> -->
+          <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+      </div>
+      <div class="col-sm-12">
+        <!--Baoai box -->
+        <div class="box bookbox" ng-hide="linear_predict.hide">
+          <div class="box-header with-border">
+            <h3 class="box-title">鸢尾花-线性预测</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="more" data-toggle="tooltip" title="More"
+                ng-click="more(9)">
+                <i class="fa fa-angle-double-right"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                title="Collapse">
+                <i class="fa fa-minus"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <strong>BaoAI 鸢尾花线性预测</strong>
+            <p></p>
+            <p>萼片长度和萼片宽度存在一定的线性关系，选择性性回归算法可以由任意给定的萼片长度预测出萼片宽度值。</p>
+            <div id="system" class="chart-panel"></div>
+            <div class="form-group has-feedback">
+              <label for="feature_select" class="control-label">{{t('鸢尾花特征')}}</label>
+              <select id="feature_select" name="feature_select" class="form-control"
+                ng-model="linear_predict.feature_select" ng-change="feature_select_change()">
+                <option value="">{{t('Please Choice')}}</option>
+                <option value="sepal_length">{{t('Sepal Length')}}</option>
+                <option value="sepal_width">{{t('Sepal Width')}}</option>
+                <option value="petal_length">{{t('Petal Length')}}</option>
+                <option value="petal_width">{{t('Petal Width')}}</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="feature_value" class="control-label">{{t('Value')}}</label>
+              <input type="text" class="form-control" id="feature_value" name="feature_value" placeholder="{{t('')}}"
+                ng-model="linear_predict.feature_value">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="linear_select" class="control-label">{{t('选择线性回归算法')}}</label>
+              <select id="linear_select" name="linear_select" class="form-control" ng-model="linear_predict.linear_select"
+                ng-change="linear_select_change()">
+                <option value="">{{t('Please Choice')}}</option>
+                <option value="LinearRegression">线性回归</option>
+                <option value="KNNRegressor">KNN回归</option>
+                <option value="DecisionTreeReg">决策树回归</option>
+                <option value="RandomForestReg">随机森林回归</option>
+                <option value="SVRReg">支持向量机回归</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="feature_select_predict" class="control-label">{{t('鸢尾花预测特征')}}</label>
+              <select id="feature_select_predict" name="feature_select_predict" class="form-control"
+                ng-model="linear_predict.feature_select_predict" ng-change="feature_select_predict_change()">
+                <option value="">{{t('Please Choice')}}</option>
+                <option value="sepal_length">{{t('Sepal Length')}}</option>
+                <option value="sepal_width">{{t('Sepal Width')}}</option>
+                <option value="petal_length">{{t('Petal Length')}}</option>
+                <option value="petal_width">{{t('Petal Width')}}</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="button" value="预测" id="logic_pred_button" class="btn btn-primary" ng-click="linear_pred_do()">
+            </div>
+            <div class="form-group has-feedback">
+              <!-- <label class="control-label">{{t('预测结果')}}:</label> -->
+              <div id='linear_result'>
+                预测结果: {{linear_predict.result.linear_result}}<br>
+                R2决定系数: {{linear_predict.result.metric}}
+              </div>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /.box-body -->
+          <!-- <div class="box-footer">
+                  Footer
+                </div> -->
+          <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+      </div>
+      <div class="col-sm-12">
+        <!--Baoai box -->
+        <div class="box bookbox" ng-hide="logic_predict.hide">
+          <div class="box-header with-border">
+            <h3 class="box-title">鸢尾花-分类预测</h3>
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="more" data-toggle="tooltip" title="More"
+                ng-click="more()">
+                <i class="fa fa-angle-double-right"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                title="Collapse">
+                <i class="fa fa-minus"></i></button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <div class="box-body">
+            <strong>BaoAI 鸢尾花分类预测</strong>
+            <p>根据花萼长度、宽度和花瓣长度、宽度四个特征值预测出鸢尾花种类</p>
+            <div class="form-group has-feedback">
+              <label for="sepal_length_logic" class="control-label">{{t('Sepal Length')}}</label>
+              <input type="text" class="form-control" id="sepal_length_logic" name="sepal_length_logic"
+                placeholder="{{t('')}}" ng-model="logic_predict.sepal_length_logic">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="sepal_width_logic" class="control-label">{{t('Sepal Width')}}</label>
+              <input type="text" class="form-control" id="sepal_width_logic" name="sepal_width_logic"
+                placeholder="{{t('')}}" ng-model="logic_predict.sepal_width_logic">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="petal_length_logic" class="control-label">{{t('Petal Length')}}</label>
+              <input type="text" class="form-control" id="petal_length_logic" name="petal_length_logic"
+                placeholder="{{t('')}}" ng-model="logic_predict.petal_length_logic">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="petal_width_logic" class="control-label">{{t('Petal Width')}}</label>
+              <input type="text" class="form-control" id="petal_width_logic" name="petal_width_logic"
+                placeholder="{{t('')}}" ng-model="logic_predict.petal_width_logic">
+              <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <label for="logic_select" class="control-label">{{t('选择逻辑分类算法')}}</label>
+              <select id="logic_select" name="logic_select" class="form-control" ng-model="logic_predict.logic_select"
+                ng-change="logic_select_change()">
+                <option value="">{{t('Please Choice')}}</option>
+                <option value="KNN">KNN</option>
+                <option value="LogisticRegression">逻辑回归</option>
+                <option value="DecisionTree">决策树</option>
+                <option value="RandomForest">随机森林</option>
+                <option value="SVM">支持向量机</option>
+                <option value="KMeans">KMeans聚类</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group has-feedback">
+              <input type="button" value="预测" id=logic_pred_button class="btn btn-primary" ng-click="logic_pred_do()">
+            </div>
+            <div class="form-group has-feedback">
+              <!-- <label class="control-label">{{t('预测结果')}}:</label> -->
+              <div id='logic_result'>
+                预测结果: {{logic_predict.result.classify_result}}<br>
+                准确率: {{logic_predict.result.metric}}
+              </div>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /.box-body -->
+          <!-- <div class="box-footer">
+                  Footer
+                </div> -->
+          <!-- /.box-footer-->
+        </div>
+        <!-- /.box -->
+      </div>
+    </div>
+    <div id="toolbar">
+      <button id="add" class="btn btn-success" data-toggle="modal">
+        <i class="glyphicon glyphicon-plus"></i>{{t('Add')}}
+      </button>
+      <button id="remove" class="btn btn-danger" disabled>
+        <i class="glyphicon glyphicon-remove"></i> {{t('Delete')}}
+      </button>
+      <button id="configs" class="btn btn-info">
+        <i class="glyphicon glyphicon-cog"></i> {{t('Configs')}}
+      </button>
+      <button id="relation" class="btn btn-info">
+        <i class="glyphicon glyphicon-cog"></i> {{t('Iris Relation Figure')}}
+      </button>
+      <button id="linear_pred" class="btn btn-info">
+        <i class="glyphicon glyphicon-cog"></i> {{t('Iris Linear Predict')}}
+      </button>
+      <button id="logic_pred" class="btn btn-info">
+        <i class="glyphicon glyphicon-cog"></i> {{t('Iris Logic Predict')}}
+      </button>
+    </div>
+  
+    <!-- modal add or edit -->
+    <div class="modal fade" id="modal-add-edit" data-backdrop="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-info">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+          </div>
+          <form data-toggle="validator" role="form" id="add-edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                <div class="form-group has-feedback" style="display: none">
+                  <input type="hidden" class="form-control" id="uid" name="uid" value="{{iris.uid}}">
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="sepal_length" class="control-label">{{t('Sepal Length')}}</label>
+                  <input type="text" class="form-control" id="sepal_length" name="sepal_length" placeholder="{{t('')}}"
+                    ng-model="iris.sepal_length">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="sepal_width" class="control-label">{{t('Sepal Width')}}</label>
+                  <input type="text" class="form-control" id="sepal_width" name="sepal_width" placeholder="{{t('')}}"
+                    ng-model="iris.sepal_width">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="petal_length" class="control-label">{{t('Petal Length')}}</label>
+                  <input type="text" class="form-control" id="petal_length" name="petal_length" placeholder="{{t('')}}"
+                    ng-model="iris.petal_length">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="petal_width" class="control-label">{{t('Petal Width')}}</label>
+                  <input type="text" class="form-control" id="petal_width" name="petal_width" placeholder="{{t('')}}"
+                    ng-model="iris.petal_width">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="irisclass" class="control-label">{{t('IRIS Class')}}</label>
+                  <input type="text" class="form-control" id="irisclass" name="irisclass" placeholder="{{t('')}}"
+                    ng-model="iris.irisclass">
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+            </div>
+          </form>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <table id="table" data-mobile-responsive="true" data-locale="{{lang}}" data-toolbar="#toolbar"
+      data-show-refresh="true" data-show-toggle="true" data-show-fullscreen="true" data-show-columns="true"
+      data-detail-view="true" data-show-export="true" data-minimum-count-columns="1" data-id-field="id"
+      data-show-footer="true" data-side-pagination="server">
+    </table>    
+  </section><!-- /.content -->
+  
+  <style>
+    .dropdown-menu input[type=checkbox]{
+      margin-right: 10px;
+    }
+    #irisdiv{
+        margin: 50px auto;
+        width: 700px;
+    }
+    #linear_pred{
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+    #logic_pred{
+        margin-top: 50px;
+        margin-bottom: 50px
+    }
+  </style>

@@ -1,0 +1,104 @@
+[
+    {
+        "title": "AI Learn",
+        "id": 381,
+        "name": "ailearn",
+        "pid": 0
+    },
+    {
+        "title": "Notice",
+        "id": 691,
+        "name": "notice",
+        "pid": 0
+    },
+    {
+        "title": "System Manager",
+        "id": 69,
+        "name": "system_manager",
+        "pid": 0
+    },
+    {
+        "title": "User Manager",
+        "id": 67,
+        "name": "user_manager",
+        "pid": 0
+    },
+    {
+        "title": "RBAC",
+        "id": 25,
+        "name": "rbac",
+        "pid": 0
+    },
+    {
+        "title": "Admin",
+        "id": 26,
+        "name": "admin",
+        "pid": 25
+    },
+    {
+        "title": "Roles",
+        "id": 27,
+        "name": "roles",
+        "pid": 25
+    },
+    {
+        "title": "Resources",
+        "id": 28,
+        "name": "resources",
+        "pid": 25
+    },
+    {
+        "title": "User Profile",
+        "id": 68,
+        "name": "user_profile",
+        "pid": 67
+    },
+    {
+        "title": "User Logs",
+        "id": 80,
+        "name": "userlogs",
+        "pid": 67
+    },
+    {
+        "title": "User Notice",
+        "id": 699,
+        "name": "user_notice",
+        "pid": 67
+    },
+    {
+        "title": "Attachments",
+        "id": 70,
+        "name": "attachments",
+        "pid": 69
+    },
+    {
+        "title": "Operate Logs",
+        "id": 76,
+        "name": "logs",
+        "pid": 69
+    },
+    {
+        "title": "Configs",
+        "id": 84,
+        "name": "configs",
+        "pid": 69
+    },
+    {
+        "title": "Category",
+        "id": 453,
+        "name": "category",
+        "pid": 69
+    },
+    {
+        "title": "IRIS",
+        "id": 382,
+        "name": "iris",
+        "pid": 381
+    },
+    {
+        "title": "Notice Content",
+        "id": 700,
+        "name": "notice_content",
+        "pid": 691
+    }
+]

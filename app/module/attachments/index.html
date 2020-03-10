@@ -1,0 +1,259 @@
+  <!--
+  /*!
+  * attachments template
+  *
+  * @desc BaoAI Front
+  * @author henry <703264459@qq.com>
+  * @see {@link http://www.baoai.co}
+  * @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+  * @license Apache-2.0
+  */   
+  -->
+  <!-- Main content -->
+  <section class="content" >
+      <div class="select">
+        <div class="form-group has-feedback" >
+          <input type="hidden" class="form-control" name="select_category_id" id="select_category_id" value="{{select.category_id}}">
+          <div class="resources-container" style="width:100%">
+              <div class="treeSelector_select_category_id" ></div>
+          </div>
+        </div>
+      </div>
+      <div id="toolbar">
+        <button id="addImage" class="btn btn-success" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i>{{t('Image')}}
+        </button>
+        <button id="addFile" class="btn btn-info" data-toggle="modal" >
+            <i class="glyphicon glyphicon-plus"></i>{{t('File')}}
+        </button>
+        <button id="remove" class="btn btn-danger" disabled>
+          <i class="glyphicon glyphicon-remove"></i>{{t('Delete')}}
+        </button>
+        <button id="attachments" class="btn btn-primary" disabled>
+          <i class="glyphicon glyphicon-file"></i> {{t('Attachment')}}
+        </button>
+      </div>
+      <!-- modal add -->
+      <div class="modal fade" id="modal-add" data-backdrop="false">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-info">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+              </div>
+              <form data-toggle="validator" role="form" id="add-form" action="" method="GET">
+              <div class="modal-body">
+                <p>
+                  <!-- <div class="form-group has-feedback">
+                    <label for="imgPicker" class="control-label">{{t('Image')}}</label>
+                    <div id="imgList" class="uploader-list"></div>
+                    <div id="imgPicker">{{t('Choice Picture')}}</div>
+                    <div class="help-block with-errors"></div>
+                  </div> -->
+                  <div class="form-group has-feedback">
+                      <label for="filePicker" class="control-label">{{t(addType)}}</label>
+                      <div id="fileList" class="uploader-list"></div>
+                      <div class="btns">
+                          <div id="filePicker">{{t('Choice File')}}</div>
+                          <button id="fileUploadBtn" class="btn btn-default">{{t('Start Uploading')}}</button>
+                      </div>
+                      <div class="help-block with-errors"></div>
+                  </div>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button> -->
+                <!-- <button type="submit" class="btn btn-primary pull-left">确定</button> -->
+                <button type="reset" class="btn btn-primary pull-left">{{t('Reset')}}</button>
+              </div>
+            </form>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+      <!-- modal edit -->
+      <div class="modal fade" id="modal-edit" data-backdrop="false">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-info">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title"><b>{{t(s)}}</b></h4>
+            </div>
+            <form data-toggle="validator" role="form" id="edit-form" action="" method="GET">
+            <div class="modal-body">
+              <p>
+                <div class="form-group has-feedback">
+                  <label for="status" class="control-label">{{t('Status')}}</label><p></p>
+                  <input type="checkbox" id="status" name="status" class="js-switch form-control"  ng-model="attachments.status" ui-switch="{color: '#1AB394'}"/>
+                </div>
+                <div class="form-group has-feedback" >
+                  <label for="category_id" class="control-label">{{t('Category')}}</label>
+                  <input type="hidden" class="form-control" name="category_id" id="category_id" value="{{attachments.category_id}}">
+                  <div class="resources-container" style="width:100%">
+                      <div class="treeSelector_category_id" ></div>
+                  </div>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>                   
+                <div class="form-group has-feedback">
+                  <label for="edit-title" class="control-label">{{t('Title')}}</label>
+                  <input type="text" class="form-control" id="edit-title" placeholder="" ng-model="attachments.title" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="isimage" class="control-label">{{t('Image')}}</label><p></p>
+                  <input type="checkbox" id="isimage" class="js-switch form-control" checked ng-model="attachments.isimage" ui-switch="{color: '#1AB394'}" />
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="iscover" class="control-label">{{t('Cover')}}</label><p></p>
+                  <input type="checkbox" id="iscover" class="js-switch form-control" checked ng-model="attachments.iscover" ui-switch="{color: '#1AB394'}" />
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="weight" class="control-label">{{t('Weight')}}</label>
+                  <input type="number" class="form-control" id="weight" placeholder="" ng-model="attachments.weight" >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="module_name" class="control-label">{{t('Module')}}</label>
+                  <input type="text" class="form-control" id="module_name" placeholder="" ng-model="attachments.module_name" >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="module_obj_id" class="control-label">{{t('Module')}}{{t('ID')}}</label>
+                  <input type="text" class="form-control" id="module_obj_id" placeholder="" ng-model="attachments.module_obj_id" >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-url" class="control-label">URL</label>
+                  <input type="text" class="form-control" id="edit-url" placeholder="" ng-model="attachments.url" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-uuid" class="control-label">UUID</label>
+                  <input type="text" class="form-control" id="edit-uuid" placeholder="" ng-model="attachments.uuid" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-imagetype" class="control-label">{{t('File Type')}}</label>
+                  <input type="text" class="form-control" id="edit-imagetype" placeholder="" ng-model="attachments.imagetype" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-filesize" class="control-label">{{t('Size')}}</label>
+                  <input type="text" class="form-control" id="edit-filesize" placeholder="" ng-model="attachments.filesize" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-mimetype" class="control-label">MimeType</label>
+                  <input type="text" class="form-control" id="edit-mimetype" placeholder="" ng-model="attachments.mimetype" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-storage" class="control-label">{{t('Storage')}}</label>
+                  <input type="text" class="form-control" id="edit-storage" placeholder="" ng-model="attachments.storage" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-imagewidth" class="control-label">{{t('Image Width')}}</label>
+                  <input type="text" class="form-control" id="edit-imagewidth" placeholder="" ng-model="attachments.imagewidth" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-imageheight" class="control-label">{{t('Image Height')}}</label>
+                  <input type="text" class="form-control" id="edit-imageheight" placeholder="" ng-model="attachments.imageheight" required >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-md5" class="control-label">MD5</label>
+                  <input type="text" class="form-control" id="edit-md5" placeholder="" ng-model="attachments.md5"  >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                  <label for="edit-sha1" class="control-label">SHA1</label>
+                  <input type="text" class="form-control" id="edit-sha1" placeholder="" ng-model="attachments.sha1"  >
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary pull-left">{{t('Submit')}}</button>
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <table
+      id="table"
+      data-mobile-responsive="true"
+      data-locale="{{lang}}"
+      data-toolbar="#toolbar"
+      data-show-refresh="true"
+      data-show-toggle="true"
+      data-show-fullscreen="true"
+      data-show-columns="true"
+      data-detail-view="true"
+      data-show-export="true"
+      data-minimum-count-columns="1"
+      data-show-pagination-switch="true"
+      data-id-field="id"
+      data-show-footer="true"
+      data-side-pagination="server"
+      >
+      </table>
+    </section><!-- /.content -->
+  
+    <style>
+        .dropdown-menu input[type=checkbox]{
+          margin-right: 10px;
+        }
+        #chooseicon {
+            margin:10px;
+        }
+        #chooseicon ul {
+            margin:5px 0 0 0;
+        }
+        #chooseicon ul li{
+            width:41px;height:42px;
+            line-height:42px;
+            border:1px solid #efefef;
+            padding:1px;
+            margin:1px;
+            text-align: center;
+            font-size:18px;
+        }
+        #chooseicon ul li:hover{
+            border:1px solid #2c3e50;
+            cursor:pointer;
+        }
+        /* .swal-modal {
+          background-color: rgba(63,255,106,0.69);
+          border: 3px solid white;
+          width: 300px;
+          height: 300px;
+        } */
+    </style>

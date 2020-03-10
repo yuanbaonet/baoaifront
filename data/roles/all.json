@@ -1,0 +1,602 @@
+[
+    {
+        "title": "AI Learn",
+        "id": 381,
+        "name": "ailearn",
+        "pid": 0
+    },
+    {
+        "title": "Notice",
+        "id": 691,
+        "name": "notice",
+        "pid": 0
+    },
+    {
+        "title": "System Manager",
+        "id": 69,
+        "name": "system_manager",
+        "pid": 0
+    },
+    {
+        "title": "User Manager",
+        "id": 67,
+        "name": "user_manager",
+        "pid": 0
+    },
+    {
+        "title": "RBAC",
+        "id": 25,
+        "name": "rbac",
+        "pid": 0
+    },
+    {
+        "title": "Admin",
+        "id": 26,
+        "name": "admin",
+        "pid": 25
+    },
+    {
+        "title": "Roles",
+        "id": 27,
+        "name": "roles",
+        "pid": 25
+    },
+    {
+        "title": "Resources",
+        "id": 28,
+        "name": "resources",
+        "pid": 25
+    },
+    {
+        "title": "View",
+        "id": 75,
+        "name": "admin_view",
+        "pid": 26
+    },
+    {
+        "title": "Add",
+        "id": 38,
+        "name": "admin_add",
+        "pid": 26
+    },
+    {
+        "title": "Edit",
+        "id": 39,
+        "name": "admin_edit",
+        "pid": 26
+    },
+    {
+        "title": "Delete",
+        "id": 40,
+        "name": "admin_del",
+        "pid": 26
+    },
+    {
+        "title": "List",
+        "id": 37,
+        "name": "admin_list",
+        "pid": 26
+    },
+    {
+        "title": "Own RBAC",
+        "id": 61,
+        "name": "admin_own_rbac",
+        "pid": 26
+    },
+    {
+        "title": "All RBAC",
+        "id": 106,
+        "name": "admin_all_rbac",
+        "pid": 26
+    },
+    {
+        "title": "Add Role",
+        "id": 62,
+        "name": "add_role",
+        "pid": 26
+    },
+    {
+        "title": "User By Token",
+        "id": 90,
+        "name": "user_by_token",
+        "pid": 26
+    },
+    {
+        "title": "View",
+        "id": 33,
+        "name": "roles_view",
+        "pid": 27
+    },
+    {
+        "title": "Add",
+        "id": 34,
+        "name": "roles_add",
+        "pid": 27
+    },
+    {
+        "title": "Edit",
+        "id": 35,
+        "name": "roles_edit",
+        "pid": 27
+    },
+    {
+        "title": "Delete",
+        "id": 36,
+        "name": "roles_del",
+        "pid": 27
+    },
+    {
+        "title": "List",
+        "id": 104,
+        "name": "roles_list",
+        "pid": 27
+    },
+    {
+        "title": "Roles Menu",
+        "id": 65,
+        "name": "roles_menu",
+        "pid": 27
+    },
+    {
+        "title": "View",
+        "id": 29,
+        "name": "resources_view",
+        "pid": 28
+    },
+    {
+        "title": "Add",
+        "id": 30,
+        "name": "resources_add",
+        "pid": 28
+    },
+    {
+        "title": "Edit",
+        "id": 31,
+        "name": "resources_edit",
+        "pid": 28
+    },
+    {
+        "title": "Delete",
+        "id": 32,
+        "name": "resources_del",
+        "pid": 28
+    },
+    {
+        "title": "List",
+        "id": 95,
+        "name": "resources_list",
+        "pid": 28
+    },
+    {
+        "title": "Resources Menu",
+        "id": 41,
+        "name": "resources_menu",
+        "pid": 28
+    },
+    {
+        "title": "All Resources",
+        "id": 66,
+        "name": "resources_all",
+        "pid": 28
+    },
+    {
+        "title": "User Routes",
+        "id": 93,
+        "name": "resources_routes",
+        "pid": 28
+    },
+    {
+        "title": "Weight",
+        "id": 109,
+        "name": "resources_weight",
+        "pid": 28
+    },
+    {
+        "title": "Order",
+        "id": 390,
+        "name": "resources_reorder",
+        "pid": 28
+    },
+    {
+        "title": "User Profile",
+        "id": 68,
+        "name": "user_profile",
+        "pid": 67
+    },
+    {
+        "title": "User Logs",
+        "id": 80,
+        "name": "userlogs",
+        "pid": 67
+    },
+    {
+        "title": "User Notice",
+        "id": 699,
+        "name": "user_notice",
+        "pid": 67
+    },
+    {
+        "title": "View",
+        "id": 94,
+        "name": "user_profile_view",
+        "pid": 68
+    },
+    {
+        "title": "Attachments",
+        "id": 70,
+        "name": "attachments",
+        "pid": 69
+    },
+    {
+        "title": "Operate Logs",
+        "id": 76,
+        "name": "logs",
+        "pid": 69
+    },
+    {
+        "title": "Configs",
+        "id": 84,
+        "name": "configs",
+        "pid": 69
+    },
+    {
+        "title": "Category",
+        "id": 453,
+        "name": "category",
+        "pid": 69
+    },
+    {
+        "title": "View",
+        "id": 107,
+        "name": "attachments_view",
+        "pid": 70
+    },
+    {
+        "title": "Add",
+        "id": 72,
+        "name": "attachments_add",
+        "pid": 70
+    },
+    {
+        "title": "Edit",
+        "id": 73,
+        "name": "attachments_edit",
+        "pid": 70
+    },
+    {
+        "title": "Delete",
+        "id": 74,
+        "name": "attachments_del",
+        "pid": 70
+    },
+    {
+        "title": "List",
+        "id": 71,
+        "name": "attachments_list",
+        "pid": 70
+    },
+    {
+        "title": "Upload",
+        "id": 91,
+        "name": "attachments_upload",
+        "pid": 70
+    },
+    {
+        "title": "Update Avatar",
+        "id": 92,
+        "name": "attachments_upload_admin_avatar",
+        "pid": 70
+    },
+    {
+        "title": "CKeditor Brower Upload",
+        "id": 345,
+        "name": "attachments_ckeditor_browser_upload",
+        "pid": 70
+    },
+    {
+        "title": "Local Image URL",
+        "id": 477,
+        "name": "attachments_local_imgurl",
+        "pid": 70
+    },
+    {
+        "title": "View",
+        "id": 77,
+        "name": "logs_view",
+        "pid": 76
+    },
+    {
+        "title": "Delete",
+        "id": 78,
+        "name": "logs_del",
+        "pid": 76
+    },
+    {
+        "title": "List",
+        "id": 79,
+        "name": "logs_list",
+        "pid": 76
+    },
+    {
+        "title": "View",
+        "id": 81,
+        "name": "userlogs_view",
+        "pid": 80
+    },
+    {
+        "title": "Delete",
+        "id": 82,
+        "name": "userlogs_del",
+        "pid": 80
+    },
+    {
+        "title": "List",
+        "id": 83,
+        "name": "userlogs_list",
+        "pid": 80
+    },
+    {
+        "title": "View",
+        "id": 85,
+        "name": "configs_view",
+        "pid": 84
+    },
+    {
+        "title": "Add",
+        "id": 86,
+        "name": "configs_add",
+        "pid": 84
+    },
+    {
+        "title": "Edit",
+        "id": 87,
+        "name": "configs_edit",
+        "pid": 84
+    },
+    {
+        "title": "Delete",
+        "id": 89,
+        "name": "configs_del",
+        "pid": 84
+    },
+    {
+        "title": "List",
+        "id": 88,
+        "name": "configs_list",
+        "pid": 84
+    },
+    {
+        "title": "Models",
+        "id": 743,
+        "name": "configs_models",
+        "pid": 84
+    },
+    {
+        "title": "Value",
+        "id": 744,
+        "name": "configs_value",
+        "pid": 84
+    },
+    {
+        "title": "IRIS",
+        "id": 382,
+        "name": "iris",
+        "pid": 381
+    },
+    {
+        "title": "View",
+        "id": 383,
+        "name": "iris_view",
+        "pid": 382
+    },
+    {
+        "title": "Add",
+        "id": 384,
+        "name": "iris_add",
+        "pid": 382
+    },
+    {
+        "title": "Edit",
+        "id": 385,
+        "name": "iris_edit",
+        "pid": 382
+    },
+    {
+        "title": "Delete",
+        "id": 386,
+        "name": "iris_del",
+        "pid": 382
+    },
+    {
+        "title": "List",
+        "id": 387,
+        "name": "iris_list",
+        "pid": 382
+    },
+    {
+        "title": "Tree",
+        "id": 388,
+        "name": "iris_menu",
+        "pid": 382
+    },
+    {
+        "title": "Linear Predict",
+        "id": 739,
+        "name": "iris_linear_predict",
+        "pid": 382
+    },
+    {
+        "title": "Iris Classify Predict",
+        "id": 741,
+        "name": "iris_classify_predict",
+        "pid": 382
+    },
+    {
+        "title": "Iris Figure",
+        "id": 740,
+        "name": "iris_show",
+        "pid": 382
+    },
+    {
+        "title": "View",
+        "id": 454,
+        "name": "category_view",
+        "pid": 453
+    },
+    {
+        "title": "Add",
+        "id": 455,
+        "name": "category_add",
+        "pid": 453
+    },
+    {
+        "title": "Edit",
+        "id": 456,
+        "name": "category_edit",
+        "pid": 453
+    },
+    {
+        "title": "Delete",
+        "id": 457,
+        "name": "category_del",
+        "pid": 453
+    },
+    {
+        "title": "List",
+        "id": 458,
+        "name": "category_list",
+        "pid": 453
+    },
+    {
+        "title": "Books List",
+        "id": 469,
+        "name": "category_books_list",
+        "pid": 453
+    },
+    {
+        "title": "News List",
+        "id": 474,
+        "name": "category_news_list",
+        "pid": 453
+    },
+    {
+        "title": "Tree",
+        "id": 459,
+        "name": "category_menu",
+        "pid": 453
+    },
+    {
+        "title": "Books Menu",
+        "id": 472,
+        "name": "category_books_menu",
+        "pid": 453
+    },
+    {
+        "title": "News Menu",
+        "id": 473,
+        "name": "category_news_menu",
+        "pid": 453
+    },
+    {
+        "title": "Add Relation",
+        "id": 460,
+        "name": "category_add_articles",
+        "pid": 453
+    },
+    {
+        "title": "Delete Relation",
+        "id": 461,
+        "name": "category_del_articles",
+        "pid": 453
+    },
+    {
+        "title": "Relation List",
+        "id": 462,
+        "name": "category_list_articles",
+        "pid": 453
+    },
+    {
+        "title": "Reorder",
+        "id": 681,
+        "name": "category_reorder",
+        "pid": 453
+    },
+    {
+        "title": "Field List",
+        "id": 682,
+        "name": "category_field_list",
+        "pid": 453
+    },
+    {
+        "title": "Notice Content",
+        "id": 700,
+        "name": "notice_content",
+        "pid": 691
+    },
+    {
+        "title": "View",
+        "id": 701,
+        "name": "notice_content_view",
+        "pid": 700
+    },
+    {
+        "title": "Add",
+        "id": 702,
+        "name": "notice_content_add",
+        "pid": 700
+    },
+    {
+        "title": "Edit",
+        "id": 703,
+        "name": "notice_content_edit",
+        "pid": 700
+    },
+    {
+        "title": "Delete",
+        "id": 704,
+        "name": "notice_content_del",
+        "pid": 700
+    },
+    {
+        "title": "List",
+        "id": 705,
+        "name": "notice_content_list",
+        "pid": 700
+    },
+    {
+        "title": "Tree",
+        "id": 706,
+        "name": "notice_content_menu",
+        "pid": 700
+    },
+    {
+        "title": "Add Relation",
+        "id": 707,
+        "name": "notice_content_add_admin",
+        "pid": 700
+    },
+    {
+        "title": "Delete Relation",
+        "id": 708,
+        "name": "notice_content_del_admin",
+        "pid": 700
+    },
+    {
+        "title": "Relation List",
+        "id": 709,
+        "name": "notice_content_list_admin",
+        "pid": 700
+    },
+    {
+        "title": "User Notice",
+        "id": 710,
+        "name": "notice_content_listbyuid",
+        "pid": 700
+    },
+    {
+        "title": "Read Status",
+        "id": 711,
+        "name": "notice_content_read_edit",
+        "pid": 700
+    }
+]

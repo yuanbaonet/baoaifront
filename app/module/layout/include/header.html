@@ -1,0 +1,127 @@
+<!--
+/*!
+* layout template
+*
+* @desc BaoAI Front
+* @author henry <703264459@qq.com>
+* @see {@link http://www.baoai.co}
+* @copyright © 2016-2020 广州源宝网络有限公司 Guangzhou Yuanbao Network Co., Ltd. {@link http://www.ybao.org}
+* @license Apache-2.0
+*/   
+-->  
+    <!-- Logo -->
+    <a ui-sref="app.dashboard" ui-sref-active="active" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>B</b>ao</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Bao</b>AI</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="" class="sidebar-toggle" data-toggle="push-menu" role="button" ng-click="demopush($event)">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Maipage -->
+          <li>
+            <!-- BaoAI Front Base -->
+            <a href="http://www.baoai.co" target="_blank"><i class="fa fa-home" style="font-size:14px;"></i></a>
+            <!-- BaoAI Front Full -->
+            <!-- <a ui-sref="web.main()" target="_blank"><i class="fa fa-home" style="font-size:14px;"></i></a> -->
+          </li>
+          <!-- Check Update -->
+          <li class="hidden-xs">
+            <a href="javascript:;" data-toggle="checkupdate" title="{{t('Check Update')}}" ng-click="checkupdate()">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+          <!-- Language List -->
+          <li class="hidden-xs">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language"></i></a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="x in lang_list" ng-class="{'active':isActive(x)}">
+                <a href="" ng-click="langSwitch(x)">{{t(x)}}</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Fullscreen -->
+          <li class="hidden-xs" id="view-fullscreen">
+            <a href="#" ng-click="fullScreen()"><i class="fa fa-arrows-alt"></i></a>
+          </li>
+          <!-- Exit Fullscreen -->
+          <li class="hidden-xs" id="cancel-fullscreen" style="display: none;">
+            <a href="#" ng-click="exitScreen()"><i class="fa fa-arrows-alt"></i></a>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">{{notices_total}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">{{t('You have notifications')}}: {{notices_total}} </li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li ng-repeat="x in notices">
+                    <a href="">
+                      <i class="{{x.icon}}"></i> {{x.title}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a ui-sref="app.user_manager.user_notice()">{{t('View all')}}</a></li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{{user.real_avatar}}" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{user.name}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="{{user.real_avatar}}" class="img-circle" alt="User Image">
+    
+                <p>
+                  {{user.name}}
+                  <small>{{user.title}}</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a ui-sref="web.main()">{{t('Website')}}</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a ui-sref="web.books()">{{t('Document')}}</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="http://github.com" target="_blank">{{t('Code')}}</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a ui-sref="app.user_manager.user_profile" class="btn btn-default btn-flat">{{t('Profile')}}</a>
+                </div>
+                <div class="pull-right">
+                  <a href="" ng-click="logout()" class="btn btn-default btn-flat">{{t('Exit')}}</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="" data-toggle="control-sidebar" ng-click="controlSidebar($event)"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
