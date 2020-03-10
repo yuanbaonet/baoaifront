@@ -161,7 +161,7 @@ Apache2.0
 
 ## 版权说明
 
-<img style="vertical-align: top;" src="./assets/img/baoai/soft.png" alt="logo" height="400px">
+<img style="vertical-align: top;" src="./assets/img/baoai/soft.jpg" alt="logo" height="400px">
   
 
 
