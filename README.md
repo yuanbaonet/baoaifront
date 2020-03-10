@@ -42,7 +42,7 @@
 
 BaoAI前后端分离框构，包含有前端项目和后端项目
 
-+ 前端项目源码: [BaoAIFront](https://github.com/zhonghenry/baoaifront) 
++ 前端项目源码: [BaoAIFront](https://github.com/yuanbaonet/baoaifront) 
 
 ## 文档
 
