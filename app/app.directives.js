@@ -340,14 +340,18 @@ app.directive('ckeditor', ['$timeout', '$q', '$rootScope', 'STATIC_URL', 'BASE_U
                 instance.on('fileUploadRequest', function (evt) {
                     var fileLoader = evt.data.fileLoader;
                     var xhr = fileLoader.xhr;
+                    var module_obj_id = 0
+                    if(!$.emp(scope.module_obj_id)){
+                        module_obj_id = scope.module_obj_id
+                    }
                     xhr.open('post', fileLoader.uploadUrl, true);
                     xhr.setRequestHeader('Cache-Control', 'no-cache');
                     xhr.setRequestHeader('X-File-Name', evt.data.fileLoader.fileName);
                     xhr.setRequestHeader('X-File-Size', evt.data.fileLoader.total);
                     xhr.setRequestHeader('authtoken', $rootScope.user.token);
                     xhr.setRequestHeader('X-Module-Name', scope.module_name);
-                    xhr.setRequestHeader('X-Module-Obj-Id', scope.module_obj_id);
-                    xhr.setRequestHeader('X-STATIC_URL', STATIC_URL);
+                    xhr.setRequestHeader('X-Module-Obj-Id', module_obj_id);
+                    xhr.setRequestHeader('X-STATIC-URL', STATIC_URL);
                     //xhr.withCredentials = true;
                     var formData = new FormData()
                     formData.append('file', fileLoader.file, fileLoader.fileName, fileLoader.total);
